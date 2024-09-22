@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Akkooo Todo',
       theme: AppTheme.lightTheme,
-      home: const HomeScreen(),
+      home:  HomeScreen(),
     );
   }
 }

@@ -1,7 +1,11 @@
+import 'package:akkooo_todo/features/domain/entities/todo.dart';
+import 'package:akkooo_todo/features/infrastructure/repositories/todo_repository_impl.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+
+  final todoRepo = TodoRepositoryImplementation();
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +14,19 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Home'),
       ),
       body: Center(
-        child: Text("working", style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),),
+        child: ElevatedButton(
+          onPressed: () {
+            todoRepo.updateTodo(
+              Todo(
+                id: 5,
+                title: " New Sun",
+                note: "cool this is working",
+                isCompleted: true,
+              ),
+            );
+          },
+          child: Text("Add Todo"),
+        ),
       ),
     );
   }

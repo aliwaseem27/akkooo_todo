@@ -21,6 +21,7 @@ dependencies:
   path_provider: ^2.1.4
   flutter_native_splash: ^2.4.1
   pretty_bloc_observer: ^1.0.4
+  injectable: ^2.4.4
 
 dev_dependencies:
   flutter_test:
@@ -32,6 +33,7 @@ dev_dependencies:
   freezed: ^2.5.7
   json_serializable: ^6.8.0
   isar_generator: ^3.1.0+1
+  injectable_generator: ^2.6.2
 
 
 dependency_overrides:
