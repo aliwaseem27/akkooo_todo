@@ -1,0 +1,14 @@
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/akkooo_todo.png
+
+  color_dark: "#333333"
+  image_dark: assets/images/akkooo_todo.png
+
+
+  android_12:
+    image: assets/images/akkooo_todo.png
+
+    color: "#ffffff"
+    image_dark: assets/images/akkooo_todo.png
+    color_dark: "#333333"
