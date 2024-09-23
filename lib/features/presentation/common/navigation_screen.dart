@@ -1,6 +1,9 @@
+import 'package:akkooo_todo/core/constants/app_colors.dart';
+import 'package:akkooo_todo/core/constants/app_sizes.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../../../core/constants/image_strings.dart';
 import '../create/screens/create_screen.dart';
 import 'app_router.dart';
 
@@ -24,6 +27,44 @@ class NavigationScreen extends StatelessWidget {
       builder: (context, child) {
         final tabsRouter = AutoTabsRouter.of(context);
         return Scaffold(
+          appBar: AppBar(
+            automaticallyImplyLeading: false,
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // leading
+                Row(
+                  children: [
+                    Icon(Icons.check_box_rounded, color: AppColors.primaryColor),
+                    SizedBox(width: AppSizes.sm),
+                    Text("Akkooo Todo"),
+                  ],
+                ),
+
+                // trailing
+                InkWell(
+                  onTap: () => context.router.push(const SettingsRoute()),
+                  child: Row(
+                    children: [
+                      Text("Ali"),
+                      SizedBox(width: AppSizes.sm),
+                      Container(
+                        height: 32,
+                        width: 32,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: AssetImage(ImageStrings.me),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
           body: child,
           bottomNavigationBar: SafeArea(
             child: Container(
@@ -64,19 +105,19 @@ class NavigationScreen extends StatelessWidget {
                 },
                 items: [
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.home_filled),
-                    label: "Home",
+                    icon: Icon(Icons.checklist_rounded),
+                    label: "Todo",
                   ),
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.person),
+                    icon: Icon(Icons.add_box_outlined),
                     label: "Create",
                   ),
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.favorite),
+                    icon: Icon(Icons.search),
                     label: "Search",
                   ),
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.shopping_bag_rounded),
+                    icon: Icon(Icons.check_box_outlined),
                     label: "Done",
                   ),
                 ],
