@@ -1,3 +1,4 @@
+import 'package:akkooo_todo/core/constants/app_sizes.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
@@ -8,21 +9,86 @@ class CreateScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      color: Colors.white,
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('This is a Modal Bottom Sheet'),
-            Text("Create Screen"),
-            ElevatedButton(
-              child: Text('Close'),
-              onPressed: () {
-                Navigator.pop(context);
-              },
+      height: MediaQuery.of(context).size.height * 0.5,
+      padding: EdgeInsets.all(AppSizes.defaultSpace),
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(AppSizes.borderRadiusLg),
+            topRight: Radius.circular(AppSizes.borderRadiusLg),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.white.withOpacity(0.5),
+              spreadRadius: 2,
+              blurRadius: 8,
+              offset: Offset(0, 0), // changes position of shadow
             ),
-          ],
+          ]),
+      child: SizedBox(
+        width: double.infinity,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Form(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top: AppSizes.sm),
+                          child: Icon(Icons.check_box_outline_blank_rounded),
+                        ),
+                        SizedBox(width: AppSizes.spaceBtwItems),
+                        Expanded(
+                          child: TextFormField(
+                            maxLines: null,
+                            decoration: InputDecoration(
+                              hintText: "What's on your mind?",
+                              border: InputBorder.none,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(top: AppSizes.sm),
+                          child: Icon(Icons.edit),
+                        ),
+                        SizedBox(width: AppSizes.spaceBtwItems),
+                        Expanded(
+                          child: TextFormField(
+                            maxLines: null,
+                            decoration: InputDecoration(
+                              hintText: "Add a note ..",
+                              border: InputBorder.none,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(
+                    child: Text('Create'),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

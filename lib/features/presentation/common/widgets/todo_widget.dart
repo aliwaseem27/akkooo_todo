@@ -21,8 +21,11 @@ class TodoWidget extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          todo.isCompleted ? Icon(Icons.check_box_rounded) : Icon(Icons.check_box_outline_blank_rounded),
-          SizedBox(width: AppSizes.spaceBtwItems),
+          IconButton(
+            onPressed: () {},
+            icon: todo.isCompleted ? Icon(Icons.check_box_rounded) : Icon(Icons.check_box_outline_blank_rounded),
+          ),
+          // SizedBox(width: AppSizes.spaceBtwItems),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,7 +35,7 @@ class TodoWidget extends StatelessWidget {
               ],
             ),
           ),
-          actionIconButton != null ? SizedBox(width: AppSizes.spaceBtwItems) : SizedBox(),
+          // actionIconButton != null ? SizedBox(width: AppSizes.spaceBtwItems) : SizedBox(),
           actionIconButton != null ? actionIconButton! : SizedBox(),
         ],
       ),

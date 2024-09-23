@@ -35,9 +35,9 @@ class AppSizes {
   static const double spaceBtwSections = 32.0;
 
   // Border radius
-  static const double borderRadiusSm = 4.0;
-  static const double borderRadiusMd = 8.0;
-  static const double borderRadiusLg = 12.0;
+  static const double borderRadiusSm = 8.0;
+  static const double borderRadiusMd = 12.0;
+  static const double borderRadiusLg = 24.0;
 
   // Divider height
   static const double dividerHeight = 1.0;
