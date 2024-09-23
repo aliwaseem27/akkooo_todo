@@ -1,16 +1,19 @@
 import 'package:akkooo_todo/core/themes/theme.dart';
-import 'package:akkooo_todo/features/presentation/home/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'features/presentation/common/app_router.dart';
+
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+
+  final _appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Akkooo Todo',
       theme: AppTheme.lightTheme,
-      home:  HomeScreen(),
+      routerConfig: _appRouter.config(),
     );
   }
 }

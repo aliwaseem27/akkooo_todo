@@ -21,5 +21,5 @@ Future<void> main() async {
     );
   }
   Bloc.observer = PrettyBlocObserver();
-  runApp(const MyApp());
+  runApp( MyApp());
 }
