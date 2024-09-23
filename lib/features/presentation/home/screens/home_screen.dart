@@ -20,6 +20,24 @@ class HomeScreen extends StatelessWidget {
               "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
       Todo(title: "test wirefraem"),
       Todo(title: "test done task", isCompleted: true),
+      Todo(
+          title: "Dsign sigun up flow",
+          note:
+          "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
+      Todo(title: "test wirefraem"),
+      Todo(title: "test done task", isCompleted: true),
+      Todo(
+          title: "Dsign sigun up flow",
+          note:
+          "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
+      Todo(title: "test wirefraem"),
+      Todo(title: "test done task", isCompleted: true),
+      Todo(
+          title: "Dsign sigun up flow",
+          note:
+          "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
+      Todo(title: "test wirefraem"),
+      Todo(title: "test done task", isCompleted: true),
     ];
     return SafeArea(
       child: Padding(
@@ -31,17 +49,19 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: AppSizes.spaceBtwSections),
 
             // List of Todos
-            ListView.separated(
-              itemCount: todos.length,
-              shrinkWrap: true,
-              // physics: const NeverScrollableScrollPhysics(),
-              itemBuilder: (context, index) {
-                final todo = todos[index];
-                return TodoWidget(todo: todo);
-              },
-              separatorBuilder: (context, index) {
-                return const SizedBox(height: AppSizes.spaceBtwItems);
-              },
+            Expanded(
+              child: ListView.separated(
+                itemCount: todos.length,
+                shrinkWrap: true,
+                // physics: const NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) {
+                  final todo = todos[index];
+                  return TodoWidget(todo: todo);
+                },
+                separatorBuilder: (context, index) {
+                  return const SizedBox(height: AppSizes.spaceBtwItems);
+                },
+              ),
             ),
 
             todos.length == 3

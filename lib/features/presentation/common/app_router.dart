@@ -19,7 +19,7 @@ class AppRouter extends RootStackRouter {
           children: [
             AutoRoute(page: HomeRoute.page),
             AutoRoute(page: CreateRoute.page),
-            AutoRoute(page: SearchRoute.page),
+            AutoRoute(page: SearchRoute.page, initial: true),
             AutoRoute(page: CompletedRoute.page),
           ],
         ),
