@@ -27,7 +27,7 @@ class NavigationScreen extends StatelessWidget {
           body: child,
           bottomNavigationBar: SafeArea(
             child: Container(
-              clipBehavior: Clip.hardEdge,
+              // clipBehavior: Clip.hardEdge,
               height: 72,
               // margin: const EdgeInsets.only(
               //     left: AppSizes.defaultSpace, right: AppSizes.defaultSpace, bottom: AppSizes.defaultSpace),
