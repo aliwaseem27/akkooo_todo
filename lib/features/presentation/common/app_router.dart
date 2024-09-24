@@ -4,7 +4,6 @@ import '../completed/screens/completed_screen.dart';
 import '../create/screens/create_screen.dart';
 import '../home/screens/home_screen.dart';
 import '../search/screens/search_screen.dart';
-import '../settings/screens/settings_screen.dart';
 import 'navigation_screen.dart';
 
 part "app_router.gr.dart";
@@ -23,6 +22,5 @@ class AppRouter extends RootStackRouter {
             AutoRoute(page: CompletedRoute.page, initial: true),
           ],
         ),
-        AutoRoute(page: SettingsRoute.page),
       ];
 }

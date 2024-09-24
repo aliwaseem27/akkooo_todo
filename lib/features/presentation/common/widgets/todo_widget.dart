@@ -17,7 +17,10 @@ class TodoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: AppColors.secondaryColor),
+      decoration: BoxDecoration(
+        color:
+            Theme.of(context).brightness == Brightness.light ? AppColors.secondaryColor : AppColorsDark.secondaryColor,
+      ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

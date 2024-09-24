@@ -1,7 +1,9 @@
 import 'package:akkooo_todo/core/constants/app_colors.dart';
 import 'package:akkooo_todo/core/constants/app_sizes.dart';
+import 'package:akkooo_todo/core/themes/blocs/theme_bloc.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/constants/image_strings.dart';
 import '../create/screens/create_screen.dart';
@@ -42,25 +44,27 @@ class NavigationScreen extends StatelessWidget {
                 ),
 
                 // trailing
-                InkWell(
-                  onTap: () => context.router.push(const SettingsRoute()),
-                  child: Row(
-                    children: [
-                      Text("Ali"),
-                      SizedBox(width: AppSizes.sm),
-                      Container(
-                        height: 32,
-                        width: 32,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                            image: AssetImage(ImageStrings.me),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                Row(
+                  children: [
+                    BlocBuilder<ThemeBloc, ThemeState>(
+                      builder: (context, state) {
+                        return IconButton(
+                          onPressed: () {
+                            context.read<ThemeBloc>().add(const ThemeEvent.toggle());
+                          },
+                          icon: Theme.of(context).brightness == Brightness.light
+                              ? const Icon(Icons.nights_stay_rounded)
+                              : const Icon(Icons.sunny),
+                        );
+                      },
+                    ),
+                    SizedBox(width: AppSizes.sm),
+                    InkWell(
+                      borderRadius: BorderRadius.circular(16),
+                      onTap: () {},
+                      child: Text("AR"),
+                    ),
+                  ],
                 )
               ],
             ),
