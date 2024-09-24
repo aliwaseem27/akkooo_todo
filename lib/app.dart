@@ -1,4 +1,5 @@
-import 'package:akkooo_todo/core/themes/theme.dart';
+import 'package:akkooo_todo/features/presentation/common/blocs/language_bloc.dart';
+import 'package:easy_localization/easy_localization.dart' as easy;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,13 +18,36 @@ class MyApp extends StatelessWidget {
         BlocProvider<ThemeBloc>(
           create: (context) => ThemeBloc(),
         ),
+        BlocProvider<LanguageBloc>(
+          create: (context) => LanguageBloc(),
+        )
       ],
-      child: BlocBuilder<ThemeBloc, ThemeState>(
-        builder: (context, themeState) {
-          return MaterialApp.router(
-            title: 'Akkooo Todo',
-            theme: themeState.themeData,
-            routerConfig: _appRouter.config(),
+      child: BlocBuilder<LanguageBloc, LanguageState>(
+        buildWhen: (previous, current) => previous.locale != current.locale,
+        builder: (context, langState) {
+          return BlocBuilder<ThemeBloc, ThemeState>(
+            builder: (context, themeState) {
+              return MaterialApp.router(
+                title: 'Akkooo Todo',
+                theme: themeState.themeData,
+                routerConfig: _appRouter.config(),
+                locale: context.locale,
+                supportedLocales: context.supportedLocales,
+                localizationsDelegates: context.localizationDelegates,
+                localeResolutionCallback: (locale, supportedLocales) {
+                  if (locale != null && locale.languageCode == 'ar') {
+                    return Locale('ar', 'EG');
+                  }
+                  return Locale('en', 'US');
+                },
+                builder: (context, child) {
+                  return Directionality(
+                    textDirection: context.locale.languageCode == 'ar' ? TextDirection.rtl : TextDirection.ltr,
+                    child: child!,
+                  );
+                },
+              );
+            },
           );
         },
       ),

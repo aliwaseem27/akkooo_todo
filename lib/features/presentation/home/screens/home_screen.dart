@@ -23,19 +23,19 @@ class HomeScreen extends StatelessWidget {
       Todo(
           title: "Dsign sigun up flow",
           note:
-          "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
+              "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
       Todo(title: "test wirefraem"),
       Todo(title: "test done task", isCompleted: true),
       Todo(
           title: "Dsign sigun up flow",
           note:
-          "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
+              "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
       Todo(title: "test wirefraem"),
       Todo(title: "test done task", isCompleted: true),
       Todo(
           title: "Dsign sigun up flow",
           note:
-          "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
+              "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
       Todo(title: "test wirefraem"),
       Todo(title: "test done task", isCompleted: true),
     ];
@@ -77,7 +77,10 @@ class HomeScreen extends StatelessWidget {
                             child: Image.asset(ImageStrings.notes),
                           ),
                           SizedBox(height: AppSizes.spaceBtwSections),
-                          Text("You have no task listed"),
+                          Directionality(
+                            textDirection: TextDirection.ltr,
+                            child: Text("You have no task listed"),
+                          ),
                           SizedBox(height: AppSizes.spaceBtwItems),
                           ElevatedButton(
                             onPressed: () {},

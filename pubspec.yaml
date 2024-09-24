@@ -22,6 +22,7 @@ dependencies:
   flutter_native_splash: ^2.4.1
   pretty_bloc_observer: ^1.0.4
   injectable: ^2.4.4
+  easy_localization: ^3.0.7
 
 dev_dependencies:
   flutter_test:
@@ -45,6 +46,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/translations/
 
   fonts:
     - family: Urbanist
