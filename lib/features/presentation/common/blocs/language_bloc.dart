@@ -12,7 +12,7 @@ part 'language_bloc.freezed.dart';
 class LanguageBloc extends Bloc<LanguageEvent, LanguageState> {
   LanguageBloc() : super(LanguageState.initial()) {
     on<_ToggleLanguage>((event, emit) {
-      final newLocale = state.locale.languageCode == 'ar' ? Locale('en', 'US') : Locale('ar', 'EG');
+      final newLocale = state.locale.languageCode == 'ar' ? const Locale('en', 'US') : const Locale('ar', 'EG');
       event.context.setLocale(newLocale);
       emit(LanguageState(newLocale));
     });

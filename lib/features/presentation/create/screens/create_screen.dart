@@ -10,10 +10,10 @@ class CreateScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.5,
-      padding: EdgeInsets.all(AppSizes.defaultSpace),
+      padding: const EdgeInsets.all(AppSizes.defaultSpace),
       decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(AppSizes.borderRadiusLg),
             topRight: Radius.circular(AppSizes.borderRadiusLg),
           ),
@@ -22,7 +22,7 @@ class CreateScreen extends StatelessWidget {
               color: Colors.white.withOpacity(0.5),
               spreadRadius: 2,
               blurRadius: 8,
-              offset: Offset(0, 0), // changes position of shadow
+              offset: const Offset(0, 0), // changes position of shadow
             ),
           ]),
       child: SizedBox(
@@ -39,14 +39,14 @@ class CreateScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          margin: EdgeInsets.only(top: AppSizes.sm),
-                          child: Icon(Icons.check_box_outline_blank_rounded),
+                          margin: const EdgeInsets.only(top: AppSizes.sm),
+                          child: const Icon(Icons.check_box_outline_blank_rounded),
                         ),
-                        SizedBox(width: AppSizes.spaceBtwItems),
+                        const SizedBox(width: AppSizes.spaceBtwItems),
                         Expanded(
                           child: TextFormField(
                             maxLines: null,
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               hintText: "What's on your mind?",
                               border: InputBorder.none,
                             ),
@@ -58,14 +58,14 @@ class CreateScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                          margin: EdgeInsets.only(top: AppSizes.sm),
-                          child: Icon(Icons.edit),
+                          margin: const EdgeInsets.only(top: AppSizes.sm),
+                          child: const Icon(Icons.edit),
                         ),
-                        SizedBox(width: AppSizes.spaceBtwItems),
+                        const SizedBox(width: AppSizes.spaceBtwItems),
                         Expanded(
                           child: TextFormField(
                             maxLines: null,
-                            decoration: InputDecoration(
+                            decoration: const InputDecoration(
                               hintText: "Add a note ..",
                               border: InputBorder.none,
                             ),
@@ -80,7 +80,7 @@ class CreateScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
-                    child: Text('Create'),
+                    child: const Text('Create'),
                     onPressed: () {
                       Navigator.pop(context);
                     },

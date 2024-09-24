@@ -6,7 +6,7 @@ class SearchBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
       decoration: BoxDecoration(
         color: Colors.grey[200],
         borderRadius: BorderRadius.circular(10),
@@ -14,11 +14,11 @@ class SearchBarWidget extends StatelessWidget {
       child: TextField(
         // controller: _searchController,
         decoration: InputDecoration(
-          prefixIcon: Icon(Icons.search),
+          prefixIcon: const Icon(Icons.search),
           // suffixIcon: _searchController.text.isNotEmpty
           suffixIcon: true
               ? IconButton(
-                  icon: Icon(Icons.clear),
+                  icon: const Icon(Icons.clear),
                   onPressed: () {
                     // _searchController.clear();
                     // setState(() {});

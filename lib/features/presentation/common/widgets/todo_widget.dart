@@ -1,5 +1,4 @@
 import 'package:akkooo_todo/core/constants/app_colors.dart';
-import 'package:akkooo_todo/core/constants/app_sizes.dart';
 import 'package:flutter/material.dart';
 
 import 'package:akkooo_todo/features/domain/entities/todo.dart';
@@ -26,7 +25,7 @@ class TodoWidget extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {},
-            icon: todo.isCompleted ? Icon(Icons.check_box_rounded) : Icon(Icons.check_box_outline_blank_rounded),
+            icon: todo.isCompleted ? const Icon(Icons.check_box_rounded) : const Icon(Icons.check_box_outline_blank_rounded),
           ),
           // SizedBox(width: AppSizes.spaceBtwItems),
           Expanded(
@@ -34,12 +33,12 @@ class TodoWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(todo.title),
-                todo.note != null ? Text(todo.note!) : SizedBox(),
+                todo.note != null ? Text(todo.note!) : const SizedBox(),
               ],
             ),
           ),
           // actionIconButton != null ? SizedBox(width: AppSizes.spaceBtwItems) : SizedBox(),
-          actionIconButton != null ? actionIconButton! : SizedBox(),
+          actionIconButton != null ? actionIconButton! : const SizedBox(),
         ],
       ),
     );

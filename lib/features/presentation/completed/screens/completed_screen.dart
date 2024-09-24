@@ -14,33 +14,33 @@ class CompletedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final todos = [
-      Todo(
+      const Todo(
           title: "Dsign sigun up flow",
           note:
               "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
-      Todo(title: "test wirefraem"),
-      Todo(title: "test done task", isCompleted: true),
+      const Todo(title: "test wirefraem"),
+      const Todo(title: "test done task", isCompleted: true),
     ];
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.all(AppSizes.defaultSpace),
+        padding: const EdgeInsets.all(AppSizes.defaultSpace),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Completed Tasks"),
+                const Text("Completed Tasks"),
                 TextButton(
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     "Delete All",
                     style: TextStyle(color: AppColors.warning),
                   ),
                 ),
               ],
             ),
-            SizedBox(height: AppSizes.spaceBtwSections),
+            const SizedBox(height: AppSizes.spaceBtwSections),
 
             // List of Todos
             Expanded(
@@ -54,7 +54,7 @@ class CompletedScreen extends StatelessWidget {
                     todo: todo,
                     actionIconButton: IconButton(
                         onPressed: () {},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.delete,
                           color: AppColors.warning,
                         )),
@@ -78,13 +78,13 @@ class CompletedScreen extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.3,
                             child: Image.asset(ImageStrings.notes),
                           ),
-                          SizedBox(height: AppSizes.spaceBtwSections),
-                          Text("No completed tasks"),
+                          const SizedBox(height: AppSizes.spaceBtwSections),
+                          const Text("No completed tasks"),
                         ],
                       ),
                     ),
                   )
-                : SizedBox()
+                : const SizedBox()
           ],
         ),
       ),

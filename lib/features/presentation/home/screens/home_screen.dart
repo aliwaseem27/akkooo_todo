@@ -14,39 +14,39 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final todos = [
-      Todo(
+      const Todo(
           title: "Dsign sigun up flow",
           note:
               "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
-      Todo(title: "test wirefraem"),
-      Todo(title: "test done task", isCompleted: true),
-      Todo(
+      const Todo(title: "test wirefraem"),
+      const Todo(title: "test done task", isCompleted: true),
+      const Todo(
           title: "Dsign sigun up flow",
           note:
               "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
-      Todo(title: "test wirefraem"),
-      Todo(title: "test done task", isCompleted: true),
-      Todo(
+      const Todo(title: "test wirefraem"),
+      const Todo(title: "test done task", isCompleted: true),
+      const Todo(
           title: "Dsign sigun up flow",
           note:
               "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
-      Todo(title: "test wirefraem"),
-      Todo(title: "test done task", isCompleted: true),
-      Todo(
+      const Todo(title: "test wirefraem"),
+      const Todo(title: "test done task", isCompleted: true),
+      const Todo(
           title: "Dsign sigun up flow",
           note:
               "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
-      Todo(title: "test wirefraem"),
-      Todo(title: "test done task", isCompleted: true),
+      const Todo(title: "test wirefraem"),
+      const Todo(title: "test done task", isCompleted: true),
     ];
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.all(AppSizes.defaultSpace),
+        padding: const EdgeInsets.all(AppSizes.defaultSpace),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            WelcomeMessageWidget(),
-            SizedBox(height: AppSizes.spaceBtwSections),
+            const WelcomeMessageWidget(),
+            const SizedBox(height: AppSizes.spaceBtwSections),
 
             // List of Todos
             Expanded(
@@ -76,15 +76,15 @@ class HomeScreen extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.3,
                             child: Image.asset(ImageStrings.notes),
                           ),
-                          SizedBox(height: AppSizes.spaceBtwSections),
-                          Directionality(
+                          const SizedBox(height: AppSizes.spaceBtwSections),
+                          const Directionality(
                             textDirection: TextDirection.ltr,
                             child: Text("You have no task listed"),
                           ),
-                          SizedBox(height: AppSizes.spaceBtwItems),
+                          const SizedBox(height: AppSizes.spaceBtwItems),
                           ElevatedButton(
                             onPressed: () {},
-                            child: Row(
+                            child: const Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Icon(Icons.add),
@@ -96,7 +96,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   )
-                : SizedBox()
+                : const SizedBox()
           ],
         ),
       ),

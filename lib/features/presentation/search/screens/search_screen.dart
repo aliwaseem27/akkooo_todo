@@ -14,21 +14,21 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final todos = [
-      Todo(
+      const Todo(
           title: "Dsign sigun up flow",
           note:
           "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
-      Todo(title: "test wirefraem"),
-      Todo(title: "test done task", isCompleted: true),
+      const Todo(title: "test wirefraem"),
+      const Todo(title: "test done task", isCompleted: true),
     ];
     return SafeArea(
       child: Padding(
-        padding: EdgeInsets.all(AppSizes.defaultSpace),
+        padding: const EdgeInsets.all(AppSizes.defaultSpace),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SearchBarWidget(),
-            SizedBox(height: AppSizes.spaceBtwSections),
+            const SearchBarWidget(),
+            const SizedBox(height: AppSizes.spaceBtwSections),
 
             // List of Todos
             Expanded(
@@ -58,13 +58,13 @@ class SearchScreen extends StatelessWidget {
                       width: MediaQuery.of(context).size.width * 0.3,
                       child: Image.asset(ImageStrings.notes),
                     ),
-                    SizedBox(height: AppSizes.spaceBtwSections),
-                    Text("No result found"),
+                    const SizedBox(height: AppSizes.spaceBtwSections),
+                    const Text("No result found"),
                   ],
                 ),
               ),
             )
-                : SizedBox()
+                : const SizedBox()
           ],
         ),
       ),

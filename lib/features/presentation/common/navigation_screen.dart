@@ -7,7 +7,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/constants/image_strings.dart';
 import '../create/screens/create_screen.dart';
 import 'app_router.dart';
 
@@ -39,8 +38,8 @@ class NavigationScreen extends StatelessWidget {
                 // leading
                 Row(
                   children: [
-                    Icon(Icons.check_box_rounded, color: AppColors.primaryColor),
-                    SizedBox(width: AppSizes.sm),
+                    const Icon(Icons.check_box_rounded, color: AppColors.primaryColor),
+                    const SizedBox(width: AppSizes.sm),
                     Text(context.tr("mainTitle")),
                   ],
                 ),
@@ -60,7 +59,7 @@ class NavigationScreen extends StatelessWidget {
                         );
                       },
                     ),
-                    SizedBox(width: AppSizes.sm),
+                    const SizedBox(width: AppSizes.sm),
                     BlocBuilder<LanguageBloc, LanguageState>(
                       builder: (context, state) {
                         return InkWell(
@@ -115,7 +114,7 @@ class NavigationScreen extends StatelessWidget {
                     tabsRouter.setActiveIndex(index);
                   }
                 },
-                items: [
+                items: const [
                   BottomNavigationBarItem(
                     icon: Icon(Icons.checklist_rounded),
                     label: "Todo",

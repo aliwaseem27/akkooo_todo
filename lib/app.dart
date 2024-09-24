@@ -23,7 +23,6 @@ class MyApp extends StatelessWidget {
         )
       ],
       child: BlocBuilder<LanguageBloc, LanguageState>(
-        buildWhen: (previous, current) => previous.locale != current.locale,
         builder: (context, langState) {
           return BlocBuilder<ThemeBloc, ThemeState>(
             builder: (context, themeState) {
@@ -36,9 +35,9 @@ class MyApp extends StatelessWidget {
                 localizationsDelegates: context.localizationDelegates,
                 localeResolutionCallback: (locale, supportedLocales) {
                   if (locale != null && locale.languageCode == 'ar') {
-                    return Locale('ar', 'EG');
+                    return const Locale('ar', 'EG');
                   }
-                  return Locale('en', 'US');
+                  return const Locale('en', 'US');
                 },
                 builder: (context, child) {
                   return Directionality(

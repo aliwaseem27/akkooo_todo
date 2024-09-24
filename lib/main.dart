@@ -25,9 +25,9 @@ Future<void> main() async {
   Bloc.observer = PrettyBlocObserver();
   runApp(
     EasyLocalization(
-      supportedLocales: [Locale('en', 'US'), Locale('ar', 'EG')],
+      supportedLocales: const [Locale('en', 'US'), Locale('ar', 'EG')],
       path: 'assets/translations',
-      fallbackLocale: Locale('en', 'US'),
+      fallbackLocale: const Locale('en', 'US'),
       child: MyApp(),
     ),
   );
