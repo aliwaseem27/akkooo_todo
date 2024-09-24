@@ -20,32 +20,38 @@ mixin _$LanguageEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(BuildContext context) toggleLanguage,
+    required TResult Function(BuildContext context) loadInitialLocal,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(BuildContext context)? toggleLanguage,
+    TResult? Function(BuildContext context)? loadInitialLocal,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(BuildContext context)? toggleLanguage,
+    TResult Function(BuildContext context)? loadInitialLocal,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ToggleLanguage value) toggleLanguage,
+    required TResult Function(_LoadInitialLocal value) loadInitialLocal,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ToggleLanguage value)? toggleLanguage,
+    TResult? Function(_LoadInitialLocal value)? loadInitialLocal,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ToggleLanguage value)? toggleLanguage,
+    TResult Function(_LoadInitialLocal value)? loadInitialLocal,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -164,6 +170,7 @@ class _$ToggleLanguageImpl implements _ToggleLanguage {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(BuildContext context) toggleLanguage,
+    required TResult Function(BuildContext context) loadInitialLocal,
   }) {
     return toggleLanguage(context);
   }
@@ -172,6 +179,7 @@ class _$ToggleLanguageImpl implements _ToggleLanguage {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(BuildContext context)? toggleLanguage,
+    TResult? Function(BuildContext context)? loadInitialLocal,
   }) {
     return toggleLanguage?.call(context);
   }
@@ -180,6 +188,7 @@ class _$ToggleLanguageImpl implements _ToggleLanguage {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(BuildContext context)? toggleLanguage,
+    TResult Function(BuildContext context)? loadInitialLocal,
     required TResult orElse(),
   }) {
     if (toggleLanguage != null) {
@@ -192,6 +201,7 @@ class _$ToggleLanguageImpl implements _ToggleLanguage {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ToggleLanguage value) toggleLanguage,
+    required TResult Function(_LoadInitialLocal value) loadInitialLocal,
   }) {
     return toggleLanguage(this);
   }
@@ -200,6 +210,7 @@ class _$ToggleLanguageImpl implements _ToggleLanguage {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ToggleLanguage value)? toggleLanguage,
+    TResult? Function(_LoadInitialLocal value)? loadInitialLocal,
   }) {
     return toggleLanguage?.call(this);
   }
@@ -208,6 +219,7 @@ class _$ToggleLanguageImpl implements _ToggleLanguage {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ToggleLanguage value)? toggleLanguage,
+    TResult Function(_LoadInitialLocal value)? loadInitialLocal,
     required TResult orElse(),
   }) {
     if (toggleLanguage != null) {
@@ -229,6 +241,152 @@ abstract class _ToggleLanguage implements LanguageEvent {
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ToggleLanguageImplCopyWith<_$ToggleLanguageImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoadInitialLocalImplCopyWith<$Res>
+    implements $LanguageEventCopyWith<$Res> {
+  factory _$$LoadInitialLocalImplCopyWith(_$LoadInitialLocalImpl value,
+          $Res Function(_$LoadInitialLocalImpl) then) =
+      __$$LoadInitialLocalImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({BuildContext context});
+}
+
+/// @nodoc
+class __$$LoadInitialLocalImplCopyWithImpl<$Res>
+    extends _$LanguageEventCopyWithImpl<$Res, _$LoadInitialLocalImpl>
+    implements _$$LoadInitialLocalImplCopyWith<$Res> {
+  __$$LoadInitialLocalImplCopyWithImpl(_$LoadInitialLocalImpl _value,
+      $Res Function(_$LoadInitialLocalImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of LanguageEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? context = null,
+  }) {
+    return _then(_$LoadInitialLocalImpl(
+      null == context
+          ? _value.context
+          : context // ignore: cast_nullable_to_non_nullable
+              as BuildContext,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoadInitialLocalImpl implements _LoadInitialLocal {
+  const _$LoadInitialLocalImpl(this.context);
+
+  @override
+  final BuildContext context;
+
+  @override
+  String toString() {
+    return 'LanguageEvent.loadInitialLocal(context: $context)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadInitialLocalImpl &&
+            (identical(other.context, context) || other.context == context));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, context);
+
+  /// Create a copy of LanguageEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadInitialLocalImplCopyWith<_$LoadInitialLocalImpl> get copyWith =>
+      __$$LoadInitialLocalImplCopyWithImpl<_$LoadInitialLocalImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(BuildContext context) toggleLanguage,
+    required TResult Function(BuildContext context) loadInitialLocal,
+  }) {
+    return loadInitialLocal(context);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(BuildContext context)? toggleLanguage,
+    TResult? Function(BuildContext context)? loadInitialLocal,
+  }) {
+    return loadInitialLocal?.call(context);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(BuildContext context)? toggleLanguage,
+    TResult Function(BuildContext context)? loadInitialLocal,
+    required TResult orElse(),
+  }) {
+    if (loadInitialLocal != null) {
+      return loadInitialLocal(context);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ToggleLanguage value) toggleLanguage,
+    required TResult Function(_LoadInitialLocal value) loadInitialLocal,
+  }) {
+    return loadInitialLocal(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ToggleLanguage value)? toggleLanguage,
+    TResult? Function(_LoadInitialLocal value)? loadInitialLocal,
+  }) {
+    return loadInitialLocal?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ToggleLanguage value)? toggleLanguage,
+    TResult Function(_LoadInitialLocal value)? loadInitialLocal,
+    required TResult orElse(),
+  }) {
+    if (loadInitialLocal != null) {
+      return loadInitialLocal(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadInitialLocal implements LanguageEvent {
+  const factory _LoadInitialLocal(final BuildContext context) =
+      _$LoadInitialLocalImpl;
+
+  @override
+  BuildContext get context;
+
+  /// Create a copy of LanguageEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$LoadInitialLocalImplCopyWith<_$LoadInitialLocalImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

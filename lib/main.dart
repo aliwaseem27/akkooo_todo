@@ -22,7 +22,9 @@ Future<void> main() async {
       directory: dir.path,
     );
   }
+
   Bloc.observer = PrettyBlocObserver();
+
   runApp(
     EasyLocalization(
       supportedLocales: const [Locale('en', 'US'), Locale('ar', 'EG')],

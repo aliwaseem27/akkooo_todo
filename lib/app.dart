@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           create: (context) => ThemeBloc(),
         ),
         BlocProvider<LanguageBloc>(
-          create: (context) => LanguageBloc(),
+          create: (context) => LanguageBloc()..add(LanguageEvent.loadInitialLocal(context)),
         )
       ],
       child: BlocBuilder<LanguageBloc, LanguageState>(
