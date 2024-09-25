@@ -4,12 +4,12 @@ import 'package:isar/isar.dart';
 import '../../../main.dart';
 
 class TodoLocalDataSource {
-  Stream<List<TodoModel>> getTodos() {
-     return isar.todoModels.where().watch(fireImmediately: true);
+  Stream<List<TodoModel>> getTodos() async* {
+     yield* isar.todoModels.where().watch(fireImmediately: true);
   }
 
-  Stream<List<TodoModel>> getCompletedTodos(){
-    return isar.todoModels
+  Stream<List<TodoModel>> getCompletedTodos() async*{
+    yield* isar.todoModels
         .filter()
         .isCompletedEqualTo(true)
         .watch(fireImmediately: true);

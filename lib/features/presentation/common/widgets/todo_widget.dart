@@ -1,7 +1,10 @@
+import 'package:akkooo_todo/app.dart';
 import 'package:akkooo_todo/core/constants/app_colors.dart';
+import 'package:akkooo_todo/features/presentation/home/blocs/todo_bloc.dart';
 import 'package:flutter/material.dart';
 
 import 'package:akkooo_todo/features/domain/entities/todo.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class TodoWidget extends StatelessWidget {
   const TodoWidget({
@@ -24,7 +27,10 @@ class TodoWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              context.read<TodoBloc>().add(TodoEvent.updateTodo(todo.copyWith(isCompleted: !todo.isCompleted)));
+              context.read<TodoBloc>().add(const TodoEvent.loadTodos());
+            },
             icon: todo.isCompleted ? const Icon(Icons.check_box_rounded) : const Icon(Icons.check_box_outline_blank_rounded),
           ),
           // SizedBox(width: AppSizes.spaceBtwItems),

@@ -858,9 +858,6 @@ mixin _$TodoState {
     required TResult Function() loading,
     required TResult Function(List<Todo> todos) loaded,
     required TResult Function(List<Todo> completedTodos) loadedCompleted,
-    required TResult Function(Todo todo) created,
-    required TResult Function(Todo todo) updated,
-    required TResult Function(Todo todo) deleted,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -870,9 +867,6 @@ mixin _$TodoState {
     TResult? Function()? loading,
     TResult? Function(List<Todo> todos)? loaded,
     TResult? Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult? Function(Todo todo)? created,
-    TResult? Function(Todo todo)? updated,
-    TResult? Function(Todo todo)? deleted,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -882,9 +876,6 @@ mixin _$TodoState {
     TResult Function()? loading,
     TResult Function(List<Todo> todos)? loaded,
     TResult Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult Function(Todo todo)? created,
-    TResult Function(Todo todo)? updated,
-    TResult Function(Todo todo)? deleted,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -895,9 +886,6 @@ mixin _$TodoState {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_LoadedCompleted value) loadedCompleted,
-    required TResult Function(_Created value) created,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_Deleted value) deleted,
     required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -907,9 +895,6 @@ mixin _$TodoState {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_LoadedCompleted value)? loadedCompleted,
-    TResult? Function(_Created value)? created,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_Deleted value)? deleted,
     TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -919,9 +904,6 @@ mixin _$TodoState {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_LoadedCompleted value)? loadedCompleted,
-    TResult Function(_Created value)? created,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_Deleted value)? deleted,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
@@ -993,9 +975,6 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(List<Todo> todos) loaded,
     required TResult Function(List<Todo> completedTodos) loadedCompleted,
-    required TResult Function(Todo todo) created,
-    required TResult Function(Todo todo) updated,
-    required TResult Function(Todo todo) deleted,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -1008,9 +987,6 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(List<Todo> todos)? loaded,
     TResult? Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult? Function(Todo todo)? created,
-    TResult? Function(Todo todo)? updated,
-    TResult? Function(Todo todo)? deleted,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -1023,9 +999,6 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(List<Todo> todos)? loaded,
     TResult Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult Function(Todo todo)? created,
-    TResult Function(Todo todo)? updated,
-    TResult Function(Todo todo)? deleted,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1042,9 +1015,6 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_LoadedCompleted value) loadedCompleted,
-    required TResult Function(_Created value) created,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_Deleted value) deleted,
     required TResult Function(_Error value) error,
   }) {
     return initial(this);
@@ -1057,9 +1027,6 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_LoadedCompleted value)? loadedCompleted,
-    TResult? Function(_Created value)? created,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_Deleted value)? deleted,
     TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
@@ -1072,9 +1039,6 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_LoadedCompleted value)? loadedCompleted,
-    TResult Function(_Created value)? created,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_Deleted value)? deleted,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1134,9 +1098,6 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() loading,
     required TResult Function(List<Todo> todos) loaded,
     required TResult Function(List<Todo> completedTodos) loadedCompleted,
-    required TResult Function(Todo todo) created,
-    required TResult Function(Todo todo) updated,
-    required TResult Function(Todo todo) deleted,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -1149,9 +1110,6 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? loading,
     TResult? Function(List<Todo> todos)? loaded,
     TResult? Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult? Function(Todo todo)? created,
-    TResult? Function(Todo todo)? updated,
-    TResult? Function(Todo todo)? deleted,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -1164,9 +1122,6 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? loading,
     TResult Function(List<Todo> todos)? loaded,
     TResult Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult Function(Todo todo)? created,
-    TResult Function(Todo todo)? updated,
-    TResult Function(Todo todo)? deleted,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1183,9 +1138,6 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_LoadedCompleted value) loadedCompleted,
-    required TResult Function(_Created value) created,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_Deleted value) deleted,
     required TResult Function(_Error value) error,
   }) {
     return loading(this);
@@ -1198,9 +1150,6 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_LoadedCompleted value)? loadedCompleted,
-    TResult? Function(_Created value)? created,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_Deleted value)? deleted,
     TResult? Function(_Error value)? error,
   }) {
     return loading?.call(this);
@@ -1213,9 +1162,6 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_LoadedCompleted value)? loadedCompleted,
-    TResult Function(_Created value)? created,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_Deleted value)? deleted,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1308,9 +1254,6 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function() loading,
     required TResult Function(List<Todo> todos) loaded,
     required TResult Function(List<Todo> completedTodos) loadedCompleted,
-    required TResult Function(Todo todo) created,
-    required TResult Function(Todo todo) updated,
-    required TResult Function(Todo todo) deleted,
     required TResult Function(String message) error,
   }) {
     return loaded(todos);
@@ -1323,9 +1266,6 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function()? loading,
     TResult? Function(List<Todo> todos)? loaded,
     TResult? Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult? Function(Todo todo)? created,
-    TResult? Function(Todo todo)? updated,
-    TResult? Function(Todo todo)? deleted,
     TResult? Function(String message)? error,
   }) {
     return loaded?.call(todos);
@@ -1338,9 +1278,6 @@ class _$LoadedImpl implements _Loaded {
     TResult Function()? loading,
     TResult Function(List<Todo> todos)? loaded,
     TResult Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult Function(Todo todo)? created,
-    TResult Function(Todo todo)? updated,
-    TResult Function(Todo todo)? deleted,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1357,9 +1294,6 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_LoadedCompleted value) loadedCompleted,
-    required TResult Function(_Created value) created,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_Deleted value) deleted,
     required TResult Function(_Error value) error,
   }) {
     return loaded(this);
@@ -1372,9 +1306,6 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_LoadedCompleted value)? loadedCompleted,
-    TResult? Function(_Created value)? created,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_Deleted value)? deleted,
     TResult? Function(_Error value)? error,
   }) {
     return loaded?.call(this);
@@ -1387,9 +1318,6 @@ class _$LoadedImpl implements _Loaded {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_LoadedCompleted value)? loadedCompleted,
-    TResult Function(_Created value)? created,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_Deleted value)? deleted,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1493,9 +1421,6 @@ class _$LoadedCompletedImpl implements _LoadedCompleted {
     required TResult Function() loading,
     required TResult Function(List<Todo> todos) loaded,
     required TResult Function(List<Todo> completedTodos) loadedCompleted,
-    required TResult Function(Todo todo) created,
-    required TResult Function(Todo todo) updated,
-    required TResult Function(Todo todo) deleted,
     required TResult Function(String message) error,
   }) {
     return loadedCompleted(completedTodos);
@@ -1508,9 +1433,6 @@ class _$LoadedCompletedImpl implements _LoadedCompleted {
     TResult? Function()? loading,
     TResult? Function(List<Todo> todos)? loaded,
     TResult? Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult? Function(Todo todo)? created,
-    TResult? Function(Todo todo)? updated,
-    TResult? Function(Todo todo)? deleted,
     TResult? Function(String message)? error,
   }) {
     return loadedCompleted?.call(completedTodos);
@@ -1523,9 +1445,6 @@ class _$LoadedCompletedImpl implements _LoadedCompleted {
     TResult Function()? loading,
     TResult Function(List<Todo> todos)? loaded,
     TResult Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult Function(Todo todo)? created,
-    TResult Function(Todo todo)? updated,
-    TResult Function(Todo todo)? deleted,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -1542,9 +1461,6 @@ class _$LoadedCompletedImpl implements _LoadedCompleted {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_LoadedCompleted value) loadedCompleted,
-    required TResult Function(_Created value) created,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_Deleted value) deleted,
     required TResult Function(_Error value) error,
   }) {
     return loadedCompleted(this);
@@ -1557,9 +1473,6 @@ class _$LoadedCompletedImpl implements _LoadedCompleted {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_LoadedCompleted value)? loadedCompleted,
-    TResult? Function(_Created value)? created,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_Deleted value)? deleted,
     TResult? Function(_Error value)? error,
   }) {
     return loadedCompleted?.call(this);
@@ -1572,9 +1485,6 @@ class _$LoadedCompletedImpl implements _LoadedCompleted {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_LoadedCompleted value)? loadedCompleted,
-    TResult Function(_Created value)? created,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_Deleted value)? deleted,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -1595,570 +1505,6 @@ abstract class _LoadedCompleted implements TodoState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadedCompletedImplCopyWith<_$LoadedCompletedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$CreatedImplCopyWith<$Res> {
-  factory _$$CreatedImplCopyWith(
-          _$CreatedImpl value, $Res Function(_$CreatedImpl) then) =
-      __$$CreatedImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({Todo todo});
-
-  $TodoCopyWith<$Res> get todo;
-}
-
-/// @nodoc
-class __$$CreatedImplCopyWithImpl<$Res>
-    extends _$TodoStateCopyWithImpl<$Res, _$CreatedImpl>
-    implements _$$CreatedImplCopyWith<$Res> {
-  __$$CreatedImplCopyWithImpl(
-      _$CreatedImpl _value, $Res Function(_$CreatedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of TodoState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? todo = null,
-  }) {
-    return _then(_$CreatedImpl(
-      null == todo
-          ? _value.todo
-          : todo // ignore: cast_nullable_to_non_nullable
-              as Todo,
-    ));
-  }
-
-  /// Create a copy of TodoState
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $TodoCopyWith<$Res> get todo {
-    return $TodoCopyWith<$Res>(_value.todo, (value) {
-      return _then(_value.copyWith(todo: value));
-    });
-  }
-}
-
-/// @nodoc
-
-class _$CreatedImpl implements _Created {
-  const _$CreatedImpl(this.todo);
-
-  @override
-  final Todo todo;
-
-  @override
-  String toString() {
-    return 'TodoState.created(todo: $todo)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CreatedImpl &&
-            (identical(other.todo, todo) || other.todo == todo));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, todo);
-
-  /// Create a copy of TodoState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CreatedImplCopyWith<_$CreatedImpl> get copyWith =>
-      __$$CreatedImplCopyWithImpl<_$CreatedImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(List<Todo> todos) loaded,
-    required TResult Function(List<Todo> completedTodos) loadedCompleted,
-    required TResult Function(Todo todo) created,
-    required TResult Function(Todo todo) updated,
-    required TResult Function(Todo todo) deleted,
-    required TResult Function(String message) error,
-  }) {
-    return created(todo);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(List<Todo> todos)? loaded,
-    TResult? Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult? Function(Todo todo)? created,
-    TResult? Function(Todo todo)? updated,
-    TResult? Function(Todo todo)? deleted,
-    TResult? Function(String message)? error,
-  }) {
-    return created?.call(todo);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<Todo> todos)? loaded,
-    TResult Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult Function(Todo todo)? created,
-    TResult Function(Todo todo)? updated,
-    TResult Function(Todo todo)? deleted,
-    TResult Function(String message)? error,
-    required TResult orElse(),
-  }) {
-    if (created != null) {
-      return created(todo);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_LoadedCompleted value) loadedCompleted,
-    required TResult Function(_Created value) created,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_Deleted value) deleted,
-    required TResult Function(_Error value) error,
-  }) {
-    return created(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_LoadedCompleted value)? loadedCompleted,
-    TResult? Function(_Created value)? created,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_Deleted value)? deleted,
-    TResult? Function(_Error value)? error,
-  }) {
-    return created?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_LoadedCompleted value)? loadedCompleted,
-    TResult Function(_Created value)? created,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_Deleted value)? deleted,
-    TResult Function(_Error value)? error,
-    required TResult orElse(),
-  }) {
-    if (created != null) {
-      return created(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Created implements TodoState {
-  const factory _Created(final Todo todo) = _$CreatedImpl;
-
-  Todo get todo;
-
-  /// Create a copy of TodoState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CreatedImplCopyWith<_$CreatedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$UpdatedImplCopyWith<$Res> {
-  factory _$$UpdatedImplCopyWith(
-          _$UpdatedImpl value, $Res Function(_$UpdatedImpl) then) =
-      __$$UpdatedImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({Todo todo});
-
-  $TodoCopyWith<$Res> get todo;
-}
-
-/// @nodoc
-class __$$UpdatedImplCopyWithImpl<$Res>
-    extends _$TodoStateCopyWithImpl<$Res, _$UpdatedImpl>
-    implements _$$UpdatedImplCopyWith<$Res> {
-  __$$UpdatedImplCopyWithImpl(
-      _$UpdatedImpl _value, $Res Function(_$UpdatedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of TodoState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? todo = null,
-  }) {
-    return _then(_$UpdatedImpl(
-      null == todo
-          ? _value.todo
-          : todo // ignore: cast_nullable_to_non_nullable
-              as Todo,
-    ));
-  }
-
-  /// Create a copy of TodoState
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $TodoCopyWith<$Res> get todo {
-    return $TodoCopyWith<$Res>(_value.todo, (value) {
-      return _then(_value.copyWith(todo: value));
-    });
-  }
-}
-
-/// @nodoc
-
-class _$UpdatedImpl implements _Updated {
-  const _$UpdatedImpl(this.todo);
-
-  @override
-  final Todo todo;
-
-  @override
-  String toString() {
-    return 'TodoState.updated(todo: $todo)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UpdatedImpl &&
-            (identical(other.todo, todo) || other.todo == todo));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, todo);
-
-  /// Create a copy of TodoState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UpdatedImplCopyWith<_$UpdatedImpl> get copyWith =>
-      __$$UpdatedImplCopyWithImpl<_$UpdatedImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(List<Todo> todos) loaded,
-    required TResult Function(List<Todo> completedTodos) loadedCompleted,
-    required TResult Function(Todo todo) created,
-    required TResult Function(Todo todo) updated,
-    required TResult Function(Todo todo) deleted,
-    required TResult Function(String message) error,
-  }) {
-    return updated(todo);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(List<Todo> todos)? loaded,
-    TResult? Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult? Function(Todo todo)? created,
-    TResult? Function(Todo todo)? updated,
-    TResult? Function(Todo todo)? deleted,
-    TResult? Function(String message)? error,
-  }) {
-    return updated?.call(todo);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<Todo> todos)? loaded,
-    TResult Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult Function(Todo todo)? created,
-    TResult Function(Todo todo)? updated,
-    TResult Function(Todo todo)? deleted,
-    TResult Function(String message)? error,
-    required TResult orElse(),
-  }) {
-    if (updated != null) {
-      return updated(todo);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_LoadedCompleted value) loadedCompleted,
-    required TResult Function(_Created value) created,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_Deleted value) deleted,
-    required TResult Function(_Error value) error,
-  }) {
-    return updated(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_LoadedCompleted value)? loadedCompleted,
-    TResult? Function(_Created value)? created,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_Deleted value)? deleted,
-    TResult? Function(_Error value)? error,
-  }) {
-    return updated?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_LoadedCompleted value)? loadedCompleted,
-    TResult Function(_Created value)? created,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_Deleted value)? deleted,
-    TResult Function(_Error value)? error,
-    required TResult orElse(),
-  }) {
-    if (updated != null) {
-      return updated(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Updated implements TodoState {
-  const factory _Updated(final Todo todo) = _$UpdatedImpl;
-
-  Todo get todo;
-
-  /// Create a copy of TodoState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UpdatedImplCopyWith<_$UpdatedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$DeletedImplCopyWith<$Res> {
-  factory _$$DeletedImplCopyWith(
-          _$DeletedImpl value, $Res Function(_$DeletedImpl) then) =
-      __$$DeletedImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({Todo todo});
-
-  $TodoCopyWith<$Res> get todo;
-}
-
-/// @nodoc
-class __$$DeletedImplCopyWithImpl<$Res>
-    extends _$TodoStateCopyWithImpl<$Res, _$DeletedImpl>
-    implements _$$DeletedImplCopyWith<$Res> {
-  __$$DeletedImplCopyWithImpl(
-      _$DeletedImpl _value, $Res Function(_$DeletedImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of TodoState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? todo = null,
-  }) {
-    return _then(_$DeletedImpl(
-      null == todo
-          ? _value.todo
-          : todo // ignore: cast_nullable_to_non_nullable
-              as Todo,
-    ));
-  }
-
-  /// Create a copy of TodoState
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $TodoCopyWith<$Res> get todo {
-    return $TodoCopyWith<$Res>(_value.todo, (value) {
-      return _then(_value.copyWith(todo: value));
-    });
-  }
-}
-
-/// @nodoc
-
-class _$DeletedImpl implements _Deleted {
-  const _$DeletedImpl(this.todo);
-
-  @override
-  final Todo todo;
-
-  @override
-  String toString() {
-    return 'TodoState.deleted(todo: $todo)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DeletedImpl &&
-            (identical(other.todo, todo) || other.todo == todo));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, todo);
-
-  /// Create a copy of TodoState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DeletedImplCopyWith<_$DeletedImpl> get copyWith =>
-      __$$DeletedImplCopyWithImpl<_$DeletedImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(List<Todo> todos) loaded,
-    required TResult Function(List<Todo> completedTodos) loadedCompleted,
-    required TResult Function(Todo todo) created,
-    required TResult Function(Todo todo) updated,
-    required TResult Function(Todo todo) deleted,
-    required TResult Function(String message) error,
-  }) {
-    return deleted(todo);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(List<Todo> todos)? loaded,
-    TResult? Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult? Function(Todo todo)? created,
-    TResult? Function(Todo todo)? updated,
-    TResult? Function(Todo todo)? deleted,
-    TResult? Function(String message)? error,
-  }) {
-    return deleted?.call(todo);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(List<Todo> todos)? loaded,
-    TResult Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult Function(Todo todo)? created,
-    TResult Function(Todo todo)? updated,
-    TResult Function(Todo todo)? deleted,
-    TResult Function(String message)? error,
-    required TResult orElse(),
-  }) {
-    if (deleted != null) {
-      return deleted(todo);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_LoadedCompleted value) loadedCompleted,
-    required TResult Function(_Created value) created,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_Deleted value) deleted,
-    required TResult Function(_Error value) error,
-  }) {
-    return deleted(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_LoadedCompleted value)? loadedCompleted,
-    TResult? Function(_Created value)? created,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_Deleted value)? deleted,
-    TResult? Function(_Error value)? error,
-  }) {
-    return deleted?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_LoadedCompleted value)? loadedCompleted,
-    TResult Function(_Created value)? created,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_Deleted value)? deleted,
-    TResult Function(_Error value)? error,
-    required TResult orElse(),
-  }) {
-    if (deleted != null) {
-      return deleted(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Deleted implements TodoState {
-  const factory _Deleted(final Todo todo) = _$DeletedImpl;
-
-  Todo get todo;
-
-  /// Create a copy of TodoState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DeletedImplCopyWith<_$DeletedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2234,9 +1580,6 @@ class _$ErrorImpl implements _Error {
     required TResult Function() loading,
     required TResult Function(List<Todo> todos) loaded,
     required TResult Function(List<Todo> completedTodos) loadedCompleted,
-    required TResult Function(Todo todo) created,
-    required TResult Function(Todo todo) updated,
-    required TResult Function(Todo todo) deleted,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -2249,9 +1592,6 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? loading,
     TResult? Function(List<Todo> todos)? loaded,
     TResult? Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult? Function(Todo todo)? created,
-    TResult? Function(Todo todo)? updated,
-    TResult? Function(Todo todo)? deleted,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -2264,9 +1604,6 @@ class _$ErrorImpl implements _Error {
     TResult Function()? loading,
     TResult Function(List<Todo> todos)? loaded,
     TResult Function(List<Todo> completedTodos)? loadedCompleted,
-    TResult Function(Todo todo)? created,
-    TResult Function(Todo todo)? updated,
-    TResult Function(Todo todo)? deleted,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -2283,9 +1620,6 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_LoadedCompleted value) loadedCompleted,
-    required TResult Function(_Created value) created,
-    required TResult Function(_Updated value) updated,
-    required TResult Function(_Deleted value) deleted,
     required TResult Function(_Error value) error,
   }) {
     return error(this);
@@ -2298,9 +1632,6 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_LoadedCompleted value)? loadedCompleted,
-    TResult? Function(_Created value)? created,
-    TResult? Function(_Updated value)? updated,
-    TResult? Function(_Deleted value)? deleted,
     TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
@@ -2313,9 +1644,6 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_LoadedCompleted value)? loadedCompleted,
-    TResult Function(_Created value)? created,
-    TResult Function(_Updated value)? updated,
-    TResult Function(_Deleted value)? deleted,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
