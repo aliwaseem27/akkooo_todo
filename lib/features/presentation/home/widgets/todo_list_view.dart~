@@ -18,7 +18,7 @@ class TodoListView extends StatelessWidget {
         return state.maybeWhen(
           initial: () => const Center(child: CircularProgressIndicator()),
           loading: () => const Center(child: CircularProgressIndicator()),
-          loadSuccess: (todos) => todos.isEmpty
+          loaded: (todos) => todos.isEmpty
               ? const NoTodosWidget()
               : ListView.separated(
                   itemCount: todos.length,

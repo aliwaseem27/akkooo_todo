@@ -20,7 +20,7 @@ class completed_todos_list_view extends StatelessWidget {
         return state.maybeWhen(
           initial: () => const Center(child: CircularProgressIndicator()),
           loading: () => const Center(child: CircularProgressIndicator()),
-          loadedCompleted: (todos) => todos.isEmpty
+          loadSuccess: (todos) => todos.isEmpty
               ? const NoCompletedTodos()
               : ListView.separated(
                   itemCount: todos.length,

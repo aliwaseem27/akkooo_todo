@@ -11,9 +11,7 @@ import '../widgets/todo_list_view.dart';
 
 @RoutePage()
 class HomeScreen extends StatelessWidget {
-
   final TodoRepository _todoRepository = TodoRepositoryImplementation();
-
 
   @override
   Widget build(BuildContext context) {

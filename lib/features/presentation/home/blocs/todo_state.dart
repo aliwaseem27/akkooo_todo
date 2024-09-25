@@ -6,9 +6,11 @@ class TodoState with _$TodoState {
 
   const factory TodoState.loading() = _Loading;
 
-  const factory TodoState.loaded(List<Todo> todos) = _Loaded;
+  // const factory TodoState.watchAllStarted() = _WatchAllStarted;
 
-  const factory TodoState.loadedCompleted(List<Todo> completedTodos) = _LoadedCompleted;
+  // const factory TodoState.watchCompletedStarted() = _WatchCompletedStarted;
+  // const factory TodoState.todosReceived(List<Todo> todos) = _TodosReceived;
+  const factory TodoState.loadSuccess(List<Todo> todos) = _LoadSuccess;
 
   // const factory TodoState.created(Todo todo) = _Created;
 

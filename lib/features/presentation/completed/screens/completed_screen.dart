@@ -16,7 +16,7 @@ class CompletedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => TodoBloc(_todoRepository)..add(const TodoEvent.loadCompletedTodos()),
+      create: (context) => TodoBloc(_todoRepository)..add(const TodoEvent.watchCompletedStarted()),
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(AppSizes.defaultSpace),

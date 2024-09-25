@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => TodoBloc(_todoRepository)..add(const TodoEvent.loadTodos()),
+      create: (context) => TodoBloc(_todoRepository)..add(const TodoEvent.watchAllStarted()),
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(AppSizes.defaultSpace),
