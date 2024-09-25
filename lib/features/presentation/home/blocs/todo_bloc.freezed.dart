@@ -18,9 +18,6 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$TodoEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Todo todo) createTodo,
-    required TResult Function(Todo todo) updateTodo,
-    required TResult Function(Todo todo) deleteTodo,
     required TResult Function() watchAllStarted,
     required TResult Function() watchCompletedStarted,
     required TResult Function(List<Todo> todos) todosReceived,
@@ -28,9 +25,6 @@ mixin _$TodoEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Todo todo)? createTodo,
-    TResult? Function(Todo todo)? updateTodo,
-    TResult? Function(Todo todo)? deleteTodo,
     TResult? Function()? watchAllStarted,
     TResult? Function()? watchCompletedStarted,
     TResult? Function(List<Todo> todos)? todosReceived,
@@ -38,9 +32,6 @@ mixin _$TodoEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Todo todo)? createTodo,
-    TResult Function(Todo todo)? updateTodo,
-    TResult Function(Todo todo)? deleteTodo,
     TResult Function()? watchAllStarted,
     TResult Function()? watchCompletedStarted,
     TResult Function(List<Todo> todos)? todosReceived,
@@ -49,9 +40,6 @@ mixin _$TodoEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_CreateTodo value) createTodo,
-    required TResult Function(_UpdateTodo value) updateTodo,
-    required TResult Function(_DeleteTodo value) deleteTodo,
     required TResult Function(_WatchAllStarted value) watchAllStarted,
     required TResult Function(_WatchCompletedStarted value)
         watchCompletedStarted,
@@ -60,9 +48,6 @@ mixin _$TodoEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CreateTodo value)? createTodo,
-    TResult? Function(_UpdateTodo value)? updateTodo,
-    TResult? Function(_DeleteTodo value)? deleteTodo,
     TResult? Function(_WatchAllStarted value)? watchAllStarted,
     TResult? Function(_WatchCompletedStarted value)? watchCompletedStarted,
     TResult? Function(_TodosReceived value)? todosReceived,
@@ -70,9 +55,6 @@ mixin _$TodoEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CreateTodo value)? createTodo,
-    TResult Function(_UpdateTodo value)? updateTodo,
-    TResult Function(_DeleteTodo value)? deleteTodo,
     TResult Function(_WatchAllStarted value)? watchAllStarted,
     TResult Function(_WatchCompletedStarted value)? watchCompletedStarted,
     TResult Function(_TodosReceived value)? todosReceived,
@@ -99,537 +81,6 @@ class _$TodoEventCopyWithImpl<$Res, $Val extends TodoEvent>
 
   /// Create a copy of TodoEvent
   /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-abstract class _$$CreateTodoImplCopyWith<$Res> {
-  factory _$$CreateTodoImplCopyWith(
-          _$CreateTodoImpl value, $Res Function(_$CreateTodoImpl) then) =
-      __$$CreateTodoImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({Todo todo});
-
-  $TodoCopyWith<$Res> get todo;
-}
-
-/// @nodoc
-class __$$CreateTodoImplCopyWithImpl<$Res>
-    extends _$TodoEventCopyWithImpl<$Res, _$CreateTodoImpl>
-    implements _$$CreateTodoImplCopyWith<$Res> {
-  __$$CreateTodoImplCopyWithImpl(
-      _$CreateTodoImpl _value, $Res Function(_$CreateTodoImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of TodoEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? todo = null,
-  }) {
-    return _then(_$CreateTodoImpl(
-      null == todo
-          ? _value.todo
-          : todo // ignore: cast_nullable_to_non_nullable
-              as Todo,
-    ));
-  }
-
-  /// Create a copy of TodoEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $TodoCopyWith<$Res> get todo {
-    return $TodoCopyWith<$Res>(_value.todo, (value) {
-      return _then(_value.copyWith(todo: value));
-    });
-  }
-}
-
-/// @nodoc
-
-class _$CreateTodoImpl implements _CreateTodo {
-  const _$CreateTodoImpl(this.todo);
-
-  @override
-  final Todo todo;
-
-  @override
-  String toString() {
-    return 'TodoEvent.createTodo(todo: $todo)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CreateTodoImpl &&
-            (identical(other.todo, todo) || other.todo == todo));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, todo);
-
-  /// Create a copy of TodoEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CreateTodoImplCopyWith<_$CreateTodoImpl> get copyWith =>
-      __$$CreateTodoImplCopyWithImpl<_$CreateTodoImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(Todo todo) createTodo,
-    required TResult Function(Todo todo) updateTodo,
-    required TResult Function(Todo todo) deleteTodo,
-    required TResult Function() watchAllStarted,
-    required TResult Function() watchCompletedStarted,
-    required TResult Function(List<Todo> todos) todosReceived,
-  }) {
-    return createTodo(todo);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Todo todo)? createTodo,
-    TResult? Function(Todo todo)? updateTodo,
-    TResult? Function(Todo todo)? deleteTodo,
-    TResult? Function()? watchAllStarted,
-    TResult? Function()? watchCompletedStarted,
-    TResult? Function(List<Todo> todos)? todosReceived,
-  }) {
-    return createTodo?.call(todo);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Todo todo)? createTodo,
-    TResult Function(Todo todo)? updateTodo,
-    TResult Function(Todo todo)? deleteTodo,
-    TResult Function()? watchAllStarted,
-    TResult Function()? watchCompletedStarted,
-    TResult Function(List<Todo> todos)? todosReceived,
-    required TResult orElse(),
-  }) {
-    if (createTodo != null) {
-      return createTodo(todo);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_CreateTodo value) createTodo,
-    required TResult Function(_UpdateTodo value) updateTodo,
-    required TResult Function(_DeleteTodo value) deleteTodo,
-    required TResult Function(_WatchAllStarted value) watchAllStarted,
-    required TResult Function(_WatchCompletedStarted value)
-        watchCompletedStarted,
-    required TResult Function(_TodosReceived value) todosReceived,
-  }) {
-    return createTodo(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CreateTodo value)? createTodo,
-    TResult? Function(_UpdateTodo value)? updateTodo,
-    TResult? Function(_DeleteTodo value)? deleteTodo,
-    TResult? Function(_WatchAllStarted value)? watchAllStarted,
-    TResult? Function(_WatchCompletedStarted value)? watchCompletedStarted,
-    TResult? Function(_TodosReceived value)? todosReceived,
-  }) {
-    return createTodo?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CreateTodo value)? createTodo,
-    TResult Function(_UpdateTodo value)? updateTodo,
-    TResult Function(_DeleteTodo value)? deleteTodo,
-    TResult Function(_WatchAllStarted value)? watchAllStarted,
-    TResult Function(_WatchCompletedStarted value)? watchCompletedStarted,
-    TResult Function(_TodosReceived value)? todosReceived,
-    required TResult orElse(),
-  }) {
-    if (createTodo != null) {
-      return createTodo(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _CreateTodo implements TodoEvent {
-  const factory _CreateTodo(final Todo todo) = _$CreateTodoImpl;
-
-  Todo get todo;
-
-  /// Create a copy of TodoEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CreateTodoImplCopyWith<_$CreateTodoImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$UpdateTodoImplCopyWith<$Res> {
-  factory _$$UpdateTodoImplCopyWith(
-          _$UpdateTodoImpl value, $Res Function(_$UpdateTodoImpl) then) =
-      __$$UpdateTodoImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({Todo todo});
-
-  $TodoCopyWith<$Res> get todo;
-}
-
-/// @nodoc
-class __$$UpdateTodoImplCopyWithImpl<$Res>
-    extends _$TodoEventCopyWithImpl<$Res, _$UpdateTodoImpl>
-    implements _$$UpdateTodoImplCopyWith<$Res> {
-  __$$UpdateTodoImplCopyWithImpl(
-      _$UpdateTodoImpl _value, $Res Function(_$UpdateTodoImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of TodoEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? todo = null,
-  }) {
-    return _then(_$UpdateTodoImpl(
-      null == todo
-          ? _value.todo
-          : todo // ignore: cast_nullable_to_non_nullable
-              as Todo,
-    ));
-  }
-
-  /// Create a copy of TodoEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $TodoCopyWith<$Res> get todo {
-    return $TodoCopyWith<$Res>(_value.todo, (value) {
-      return _then(_value.copyWith(todo: value));
-    });
-  }
-}
-
-/// @nodoc
-
-class _$UpdateTodoImpl implements _UpdateTodo {
-  const _$UpdateTodoImpl(this.todo);
-
-  @override
-  final Todo todo;
-
-  @override
-  String toString() {
-    return 'TodoEvent.updateTodo(todo: $todo)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UpdateTodoImpl &&
-            (identical(other.todo, todo) || other.todo == todo));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, todo);
-
-  /// Create a copy of TodoEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UpdateTodoImplCopyWith<_$UpdateTodoImpl> get copyWith =>
-      __$$UpdateTodoImplCopyWithImpl<_$UpdateTodoImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(Todo todo) createTodo,
-    required TResult Function(Todo todo) updateTodo,
-    required TResult Function(Todo todo) deleteTodo,
-    required TResult Function() watchAllStarted,
-    required TResult Function() watchCompletedStarted,
-    required TResult Function(List<Todo> todos) todosReceived,
-  }) {
-    return updateTodo(todo);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Todo todo)? createTodo,
-    TResult? Function(Todo todo)? updateTodo,
-    TResult? Function(Todo todo)? deleteTodo,
-    TResult? Function()? watchAllStarted,
-    TResult? Function()? watchCompletedStarted,
-    TResult? Function(List<Todo> todos)? todosReceived,
-  }) {
-    return updateTodo?.call(todo);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Todo todo)? createTodo,
-    TResult Function(Todo todo)? updateTodo,
-    TResult Function(Todo todo)? deleteTodo,
-    TResult Function()? watchAllStarted,
-    TResult Function()? watchCompletedStarted,
-    TResult Function(List<Todo> todos)? todosReceived,
-    required TResult orElse(),
-  }) {
-    if (updateTodo != null) {
-      return updateTodo(todo);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_CreateTodo value) createTodo,
-    required TResult Function(_UpdateTodo value) updateTodo,
-    required TResult Function(_DeleteTodo value) deleteTodo,
-    required TResult Function(_WatchAllStarted value) watchAllStarted,
-    required TResult Function(_WatchCompletedStarted value)
-        watchCompletedStarted,
-    required TResult Function(_TodosReceived value) todosReceived,
-  }) {
-    return updateTodo(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CreateTodo value)? createTodo,
-    TResult? Function(_UpdateTodo value)? updateTodo,
-    TResult? Function(_DeleteTodo value)? deleteTodo,
-    TResult? Function(_WatchAllStarted value)? watchAllStarted,
-    TResult? Function(_WatchCompletedStarted value)? watchCompletedStarted,
-    TResult? Function(_TodosReceived value)? todosReceived,
-  }) {
-    return updateTodo?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CreateTodo value)? createTodo,
-    TResult Function(_UpdateTodo value)? updateTodo,
-    TResult Function(_DeleteTodo value)? deleteTodo,
-    TResult Function(_WatchAllStarted value)? watchAllStarted,
-    TResult Function(_WatchCompletedStarted value)? watchCompletedStarted,
-    TResult Function(_TodosReceived value)? todosReceived,
-    required TResult orElse(),
-  }) {
-    if (updateTodo != null) {
-      return updateTodo(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _UpdateTodo implements TodoEvent {
-  const factory _UpdateTodo(final Todo todo) = _$UpdateTodoImpl;
-
-  Todo get todo;
-
-  /// Create a copy of TodoEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UpdateTodoImplCopyWith<_$UpdateTodoImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$DeleteTodoImplCopyWith<$Res> {
-  factory _$$DeleteTodoImplCopyWith(
-          _$DeleteTodoImpl value, $Res Function(_$DeleteTodoImpl) then) =
-      __$$DeleteTodoImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({Todo todo});
-
-  $TodoCopyWith<$Res> get todo;
-}
-
-/// @nodoc
-class __$$DeleteTodoImplCopyWithImpl<$Res>
-    extends _$TodoEventCopyWithImpl<$Res, _$DeleteTodoImpl>
-    implements _$$DeleteTodoImplCopyWith<$Res> {
-  __$$DeleteTodoImplCopyWithImpl(
-      _$DeleteTodoImpl _value, $Res Function(_$DeleteTodoImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of TodoEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? todo = null,
-  }) {
-    return _then(_$DeleteTodoImpl(
-      null == todo
-          ? _value.todo
-          : todo // ignore: cast_nullable_to_non_nullable
-              as Todo,
-    ));
-  }
-
-  /// Create a copy of TodoEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $TodoCopyWith<$Res> get todo {
-    return $TodoCopyWith<$Res>(_value.todo, (value) {
-      return _then(_value.copyWith(todo: value));
-    });
-  }
-}
-
-/// @nodoc
-
-class _$DeleteTodoImpl implements _DeleteTodo {
-  const _$DeleteTodoImpl(this.todo);
-
-  @override
-  final Todo todo;
-
-  @override
-  String toString() {
-    return 'TodoEvent.deleteTodo(todo: $todo)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DeleteTodoImpl &&
-            (identical(other.todo, todo) || other.todo == todo));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, todo);
-
-  /// Create a copy of TodoEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DeleteTodoImplCopyWith<_$DeleteTodoImpl> get copyWith =>
-      __$$DeleteTodoImplCopyWithImpl<_$DeleteTodoImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(Todo todo) createTodo,
-    required TResult Function(Todo todo) updateTodo,
-    required TResult Function(Todo todo) deleteTodo,
-    required TResult Function() watchAllStarted,
-    required TResult Function() watchCompletedStarted,
-    required TResult Function(List<Todo> todos) todosReceived,
-  }) {
-    return deleteTodo(todo);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Todo todo)? createTodo,
-    TResult? Function(Todo todo)? updateTodo,
-    TResult? Function(Todo todo)? deleteTodo,
-    TResult? Function()? watchAllStarted,
-    TResult? Function()? watchCompletedStarted,
-    TResult? Function(List<Todo> todos)? todosReceived,
-  }) {
-    return deleteTodo?.call(todo);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Todo todo)? createTodo,
-    TResult Function(Todo todo)? updateTodo,
-    TResult Function(Todo todo)? deleteTodo,
-    TResult Function()? watchAllStarted,
-    TResult Function()? watchCompletedStarted,
-    TResult Function(List<Todo> todos)? todosReceived,
-    required TResult orElse(),
-  }) {
-    if (deleteTodo != null) {
-      return deleteTodo(todo);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_CreateTodo value) createTodo,
-    required TResult Function(_UpdateTodo value) updateTodo,
-    required TResult Function(_DeleteTodo value) deleteTodo,
-    required TResult Function(_WatchAllStarted value) watchAllStarted,
-    required TResult Function(_WatchCompletedStarted value)
-        watchCompletedStarted,
-    required TResult Function(_TodosReceived value) todosReceived,
-  }) {
-    return deleteTodo(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CreateTodo value)? createTodo,
-    TResult? Function(_UpdateTodo value)? updateTodo,
-    TResult? Function(_DeleteTodo value)? deleteTodo,
-    TResult? Function(_WatchAllStarted value)? watchAllStarted,
-    TResult? Function(_WatchCompletedStarted value)? watchCompletedStarted,
-    TResult? Function(_TodosReceived value)? todosReceived,
-  }) {
-    return deleteTodo?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CreateTodo value)? createTodo,
-    TResult Function(_UpdateTodo value)? updateTodo,
-    TResult Function(_DeleteTodo value)? deleteTodo,
-    TResult Function(_WatchAllStarted value)? watchAllStarted,
-    TResult Function(_WatchCompletedStarted value)? watchCompletedStarted,
-    TResult Function(_TodosReceived value)? todosReceived,
-    required TResult orElse(),
-  }) {
-    if (deleteTodo != null) {
-      return deleteTodo(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _DeleteTodo implements TodoEvent {
-  const factory _DeleteTodo(final Todo todo) = _$DeleteTodoImpl;
-
-  Todo get todo;
-
-  /// Create a copy of TodoEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DeleteTodoImplCopyWith<_$DeleteTodoImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -673,9 +124,6 @@ class _$WatchAllStartedImpl implements _WatchAllStarted {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Todo todo) createTodo,
-    required TResult Function(Todo todo) updateTodo,
-    required TResult Function(Todo todo) deleteTodo,
     required TResult Function() watchAllStarted,
     required TResult Function() watchCompletedStarted,
     required TResult Function(List<Todo> todos) todosReceived,
@@ -686,9 +134,6 @@ class _$WatchAllStartedImpl implements _WatchAllStarted {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Todo todo)? createTodo,
-    TResult? Function(Todo todo)? updateTodo,
-    TResult? Function(Todo todo)? deleteTodo,
     TResult? Function()? watchAllStarted,
     TResult? Function()? watchCompletedStarted,
     TResult? Function(List<Todo> todos)? todosReceived,
@@ -699,9 +144,6 @@ class _$WatchAllStartedImpl implements _WatchAllStarted {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Todo todo)? createTodo,
-    TResult Function(Todo todo)? updateTodo,
-    TResult Function(Todo todo)? deleteTodo,
     TResult Function()? watchAllStarted,
     TResult Function()? watchCompletedStarted,
     TResult Function(List<Todo> todos)? todosReceived,
@@ -716,9 +158,6 @@ class _$WatchAllStartedImpl implements _WatchAllStarted {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_CreateTodo value) createTodo,
-    required TResult Function(_UpdateTodo value) updateTodo,
-    required TResult Function(_DeleteTodo value) deleteTodo,
     required TResult Function(_WatchAllStarted value) watchAllStarted,
     required TResult Function(_WatchCompletedStarted value)
         watchCompletedStarted,
@@ -730,9 +169,6 @@ class _$WatchAllStartedImpl implements _WatchAllStarted {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CreateTodo value)? createTodo,
-    TResult? Function(_UpdateTodo value)? updateTodo,
-    TResult? Function(_DeleteTodo value)? deleteTodo,
     TResult? Function(_WatchAllStarted value)? watchAllStarted,
     TResult? Function(_WatchCompletedStarted value)? watchCompletedStarted,
     TResult? Function(_TodosReceived value)? todosReceived,
@@ -743,9 +179,6 @@ class _$WatchAllStartedImpl implements _WatchAllStarted {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CreateTodo value)? createTodo,
-    TResult Function(_UpdateTodo value)? updateTodo,
-    TResult Function(_DeleteTodo value)? deleteTodo,
     TResult Function(_WatchAllStarted value)? watchAllStarted,
     TResult Function(_WatchCompletedStarted value)? watchCompletedStarted,
     TResult Function(_TodosReceived value)? todosReceived,
@@ -805,9 +238,6 @@ class _$WatchCompletedStartedImpl implements _WatchCompletedStarted {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Todo todo) createTodo,
-    required TResult Function(Todo todo) updateTodo,
-    required TResult Function(Todo todo) deleteTodo,
     required TResult Function() watchAllStarted,
     required TResult Function() watchCompletedStarted,
     required TResult Function(List<Todo> todos) todosReceived,
@@ -818,9 +248,6 @@ class _$WatchCompletedStartedImpl implements _WatchCompletedStarted {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Todo todo)? createTodo,
-    TResult? Function(Todo todo)? updateTodo,
-    TResult? Function(Todo todo)? deleteTodo,
     TResult? Function()? watchAllStarted,
     TResult? Function()? watchCompletedStarted,
     TResult? Function(List<Todo> todos)? todosReceived,
@@ -831,9 +258,6 @@ class _$WatchCompletedStartedImpl implements _WatchCompletedStarted {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Todo todo)? createTodo,
-    TResult Function(Todo todo)? updateTodo,
-    TResult Function(Todo todo)? deleteTodo,
     TResult Function()? watchAllStarted,
     TResult Function()? watchCompletedStarted,
     TResult Function(List<Todo> todos)? todosReceived,
@@ -848,9 +272,6 @@ class _$WatchCompletedStartedImpl implements _WatchCompletedStarted {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_CreateTodo value) createTodo,
-    required TResult Function(_UpdateTodo value) updateTodo,
-    required TResult Function(_DeleteTodo value) deleteTodo,
     required TResult Function(_WatchAllStarted value) watchAllStarted,
     required TResult Function(_WatchCompletedStarted value)
         watchCompletedStarted,
@@ -862,9 +283,6 @@ class _$WatchCompletedStartedImpl implements _WatchCompletedStarted {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CreateTodo value)? createTodo,
-    TResult? Function(_UpdateTodo value)? updateTodo,
-    TResult? Function(_DeleteTodo value)? deleteTodo,
     TResult? Function(_WatchAllStarted value)? watchAllStarted,
     TResult? Function(_WatchCompletedStarted value)? watchCompletedStarted,
     TResult? Function(_TodosReceived value)? todosReceived,
@@ -875,9 +293,6 @@ class _$WatchCompletedStartedImpl implements _WatchCompletedStarted {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CreateTodo value)? createTodo,
-    TResult Function(_UpdateTodo value)? updateTodo,
-    TResult Function(_DeleteTodo value)? deleteTodo,
     TResult Function(_WatchAllStarted value)? watchAllStarted,
     TResult Function(_WatchCompletedStarted value)? watchCompletedStarted,
     TResult Function(_TodosReceived value)? todosReceived,
@@ -968,9 +383,6 @@ class _$TodosReceivedImpl implements _TodosReceived {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(Todo todo) createTodo,
-    required TResult Function(Todo todo) updateTodo,
-    required TResult Function(Todo todo) deleteTodo,
     required TResult Function() watchAllStarted,
     required TResult Function() watchCompletedStarted,
     required TResult Function(List<Todo> todos) todosReceived,
@@ -981,9 +393,6 @@ class _$TodosReceivedImpl implements _TodosReceived {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Todo todo)? createTodo,
-    TResult? Function(Todo todo)? updateTodo,
-    TResult? Function(Todo todo)? deleteTodo,
     TResult? Function()? watchAllStarted,
     TResult? Function()? watchCompletedStarted,
     TResult? Function(List<Todo> todos)? todosReceived,
@@ -994,9 +403,6 @@ class _$TodosReceivedImpl implements _TodosReceived {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Todo todo)? createTodo,
-    TResult Function(Todo todo)? updateTodo,
-    TResult Function(Todo todo)? deleteTodo,
     TResult Function()? watchAllStarted,
     TResult Function()? watchCompletedStarted,
     TResult Function(List<Todo> todos)? todosReceived,
@@ -1011,9 +417,6 @@ class _$TodosReceivedImpl implements _TodosReceived {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_CreateTodo value) createTodo,
-    required TResult Function(_UpdateTodo value) updateTodo,
-    required TResult Function(_DeleteTodo value) deleteTodo,
     required TResult Function(_WatchAllStarted value) watchAllStarted,
     required TResult Function(_WatchCompletedStarted value)
         watchCompletedStarted,
@@ -1025,9 +428,6 @@ class _$TodosReceivedImpl implements _TodosReceived {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_CreateTodo value)? createTodo,
-    TResult? Function(_UpdateTodo value)? updateTodo,
-    TResult? Function(_DeleteTodo value)? deleteTodo,
     TResult? Function(_WatchAllStarted value)? watchAllStarted,
     TResult? Function(_WatchCompletedStarted value)? watchCompletedStarted,
     TResult? Function(_TodosReceived value)? todosReceived,
@@ -1038,9 +438,6 @@ class _$TodosReceivedImpl implements _TodosReceived {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_CreateTodo value)? createTodo,
-    TResult Function(_UpdateTodo value)? updateTodo,
-    TResult Function(_DeleteTodo value)? deleteTodo,
     TResult Function(_WatchAllStarted value)? watchAllStarted,
     TResult Function(_WatchCompletedStarted value)? watchCompletedStarted,
     TResult Function(_TodosReceived value)? todosReceived,

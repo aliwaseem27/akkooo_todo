@@ -30,10 +30,17 @@ class CompletedRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [CreateScreen]
-class CreateRoute extends PageRouteInfo<void> {
-  const CreateRoute({List<PageRouteInfo>? children})
-      : super(
+class CreateRoute extends PageRouteInfo<CreateRouteArgs> {
+  CreateRoute({
+    Key? key,
+    Todo? todo,
+    List<PageRouteInfo>? children,
+  }) : super(
           CreateRoute.name,
+          args: CreateRouteArgs(
+            key: key,
+            todo: todo,
+          ),
           initialChildren: children,
         );
 
@@ -42,9 +49,30 @@ class CreateRoute extends PageRouteInfo<void> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const CreateScreen();
+      final args =
+          data.argsAs<CreateRouteArgs>(orElse: () => const CreateRouteArgs());
+      return CreateScreen(
+        key: args.key,
+        todo: args.todo,
+      );
     },
   );
+}
+
+class CreateRouteArgs {
+  const CreateRouteArgs({
+    this.key,
+    this.todo,
+  });
+
+  final Key? key;
+
+  final Todo? todo;
+
+  @override
+  String toString() {
+    return 'CreateRouteArgs{key: $key, todo: $todo}';
+  }
 }
 
 /// generated route for

@@ -5,8 +5,8 @@ import 'package:injectable/injectable.dart';
 import '../../domain/repositories/todo_repository.dart';
 import '../models/todo_model.dart';
 
-@LazySingleton(as: TodoRepository)
-class TodoRepositoryImplementation implements TodoRepository {
+@LazySingleton(as: ITodoRepository)
+class TodoRepositoryImplementation implements ITodoRepository {
   final todoLocalDataSource = TodoLocalDataSource();
 
   @override

@@ -1,6 +1,6 @@
 import '../entities/todo.dart';
 
-abstract class TodoRepository {
+abstract class ITodoRepository {
   Future<void> createTodo(Todo todo);
 
   Stream<List<Todo>> readTodos();

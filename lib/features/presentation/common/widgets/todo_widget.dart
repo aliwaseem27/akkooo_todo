@@ -28,7 +28,7 @@ class TodoWidget extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {
-              context.read<TodoBloc>().add(TodoEvent.updateTodo(todo.copyWith(isCompleted: !todo.isCompleted)));
+              // context.read<TodoBloc>().add(TodoEvent.updateTodo(todo.copyWith(isCompleted: !todo.isCompleted)));
             },
             icon: todo.isCompleted
                 ? const Icon(Icons.check_box_rounded)
