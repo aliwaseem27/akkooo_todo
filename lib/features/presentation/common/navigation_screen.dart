@@ -21,7 +21,7 @@ class NavigationScreen extends StatelessWidget {
         HomeRoute(),
         HomeRoute(),
         const SearchRoute(),
-         CompletedRoute(),
+        CompletedRoute(),
       ],
       transitionBuilder: (context, child, animation) => FadeTransition(
         opacity: animation,
@@ -106,6 +106,9 @@ class NavigationScreen extends StatelessWidget {
                 onTap: (index) {
                   if (index == 1) {
                     showModalBottomSheet(
+                        backgroundColor: Theme.of(context).brightness == Brightness.light
+                            ? Colors.white
+                            : AppColors.neutralDarkColor,
                         context: context,
                         builder: (context) {
                           return const CreateScreen();
@@ -114,22 +117,22 @@ class NavigationScreen extends StatelessWidget {
                     tabsRouter.setActiveIndex(index);
                   }
                 },
-                items: const [
+                items:  [
                   BottomNavigationBarItem(
                     icon: Icon(Icons.checklist_rounded),
-                    label: "Todo",
+                    label: context.tr('todo'),
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.add_box_outlined),
-                    label: "Create",
+                    label: context.tr('create'),
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.search),
-                    label: "Search",
+                    label: context.tr('search'),
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.check_box_outlined),
-                    label: "Done",
+                    label: context.tr('done'),
                   ),
                 ],
               ),

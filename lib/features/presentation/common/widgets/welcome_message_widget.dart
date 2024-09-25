@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeMessageWidget extends StatelessWidget {
@@ -7,16 +8,16 @@ class WelcomeMessageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return  Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           children: [
-            Text('Welcome, '),
-            Text('John'),
+            Text(context.tr('welcome')),
+            Text(context.tr('name')),
           ],
         ),
-        Text("You've got 7 tasks to do."),
+        Text("${context.tr('youGot')} 7 ${context.tr('tasksToDo')}"),
       ],
     );
   }

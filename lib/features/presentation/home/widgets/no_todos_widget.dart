@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/constants/app_sizes.dart';
@@ -21,18 +22,15 @@ class NoTodosWidget extends StatelessWidget {
             child: Image.asset(ImageStrings.notes),
           ),
           const SizedBox(height: AppSizes.spaceBtwSections),
-          const Directionality(
-            textDirection: TextDirection.ltr,
-            child: Text("You have no task listed"),
-          ),
+           Text(context.tr('noTaskListed')),
           const SizedBox(height: AppSizes.spaceBtwItems),
           ElevatedButton(
             onPressed: () {},
-            child: const Row(
+            child:  Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Icon(Icons.add),
-                Text("Create task"),
+                Text(context.tr('createTask')),
               ],
             ),
           ),

@@ -1,3 +1,19 @@
 {
-  "mainTitle": "Akkooo Todo"
+  "mainTitle": "Akkooo Todo",
+  "welcome": "Welcome, ",
+  "name": "Ali",
+  "youGot": "You've got",
+  "tasksToDo": "tasks to do.",
+  "noTaskListed": "You have no task listed",
+  "createTask": "Create task",
+  "whatsOnYourMind": "What's on your mind?",
+  "addNote": "Add a note..",
+  "create": "Create",
+  "todo": "Todo",
+  "search": "Search",
+  "done": "Done",
+  "noResultFound": "No result found",
+  "completedTasks": "Completed Tasks",
+  "deleteAll": "Delete All",
+  "noCompletedTasks": "No completed tasks"
 }

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/constants/app_sizes.dart';
@@ -21,7 +22,7 @@ class NoCompletedTodos extends StatelessWidget {
             child: Image.asset(ImageStrings.notes),
           ),
           const SizedBox(height: AppSizes.spaceBtwSections),
-          const Text("No completed tasks"),
+           Text(context.tr('noCompletedTasks')),
         ],
       ),
     );

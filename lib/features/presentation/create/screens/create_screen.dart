@@ -1,5 +1,6 @@
 import 'package:akkooo_todo/core/constants/app_sizes.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -12,19 +13,19 @@ class CreateScreen extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.5,
       padding: const EdgeInsets.all(AppSizes.defaultSpace),
       decoration: BoxDecoration(
-          color: Colors.white,
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(AppSizes.borderRadiusLg),
             topRight: Radius.circular(AppSizes.borderRadiusLg),
           ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.white.withOpacity(0.5),
-              spreadRadius: 2,
-              blurRadius: 8,
-              offset: const Offset(0, 0), // changes position of shadow
-            ),
-          ]),
+          // boxShadow: [
+          //   BoxShadow(
+          //     color: Colors.white.withOpacity(0.5),
+          //     spreadRadius: 2,
+          //     blurRadius: 8,
+          //     offset: const Offset(0, 0), // changes position of shadow
+          //   ),
+          // ],
+      ),
       child: SizedBox(
         width: double.infinity,
         child: SingleChildScrollView(
@@ -46,8 +47,8 @@ class CreateScreen extends StatelessWidget {
                         Expanded(
                           child: TextFormField(
                             maxLines: null,
-                            decoration: const InputDecoration(
-                              hintText: "What's on your mind?",
+                            decoration:  InputDecoration(
+                              hintText: context.tr('whatsOnYourMind'),
                               border: InputBorder.none,
                             ),
                           ),
@@ -65,8 +66,8 @@ class CreateScreen extends StatelessWidget {
                         Expanded(
                           child: TextFormField(
                             maxLines: null,
-                            decoration: const InputDecoration(
-                              hintText: "Add a note ..",
+                            decoration:  InputDecoration(
+                              hintText: context.tr('addNote'),
                               border: InputBorder.none,
                             ),
                           ),
@@ -80,7 +81,7 @@ class CreateScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
-                    child: const Text('Create'),
+                    child:  Text(context.tr('create')),
                     onPressed: () {
                       Navigator.pop(context);
                     },

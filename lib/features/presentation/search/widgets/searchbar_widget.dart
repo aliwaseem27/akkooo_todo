@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class SearchBarWidget extends StatelessWidget {
@@ -25,7 +26,7 @@ class SearchBarWidget extends StatelessWidget {
                   },
                 )
               : null,
-          hintText: 'Search',
+          hintText: context.tr('search'),
           border: InputBorder.none,
         ),
         onChanged: (value) {

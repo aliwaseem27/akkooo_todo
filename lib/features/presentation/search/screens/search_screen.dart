@@ -1,5 +1,6 @@
 import 'package:akkooo_todo/features/presentation/search/widgets/searchbar_widget.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/constants/app_sizes.dart';
@@ -59,7 +60,7 @@ class SearchScreen extends StatelessWidget {
                       child: Image.asset(ImageStrings.notes),
                     ),
                     const SizedBox(height: AppSizes.spaceBtwSections),
-                    const Text("No result found"),
+                     Text(context.tr('noResultFound')),
                   ],
                 ),
               ),

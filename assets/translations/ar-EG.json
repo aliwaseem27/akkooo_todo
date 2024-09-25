@@ -1,3 +1,19 @@
 {
-  "mainTitle":"اكووو تودو"
+  "mainTitle": "اكووو تودو",
+  "welcome": "مرحبا٫ ",
+  "name": "علي",
+  "youGot": "لديك",
+  "tasksToDo": "من المهام غير المنجزة.",
+  "noTaskListed": "لا توجد مهام",
+  "createTask": "انشاء مهمة",
+  "whatsOnYourMind": "ماذا يشغل عقلك؟",
+  "addNote": "اضافة ملاحظة..",
+  "create": "انشاء",
+  "todo": "المهام",
+  "search": "بحث",
+  "done": "المنجزة",
+  "noResultFound": "لا توجد نتائج",
+  "completedTasks": "المهام المنجزة",
+  "deleteAll": "حذف الكل",
+  "noCompletedTasks": "لا توجد مهام منجزة"
 }
