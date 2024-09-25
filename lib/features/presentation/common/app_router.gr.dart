@@ -23,7 +23,7 @@ class CompletedRoute extends PageRouteInfo<void> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const CompletedScreen();
+      return CompletedScreen();
     },
   );
 }
@@ -61,7 +61,7 @@ class HomeRoute extends PageRouteInfo<void> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const HomeScreen();
+      return HomeScreen();
     },
   );
 }

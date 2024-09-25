@@ -14,9 +14,25 @@ class TodoRepositoryImplementation implements TodoRepository {
   }
 
   @override
-  Future<List<Todo>> readTodos() async {
-    final todoModels = await todoLocalDataSource.getTodos();
-    return todoModels.map((model) => Todo.fromModel(model)).toList();
+  Stream<List<Todo>> readTodos() async* {
+    yield* todoLocalDataSource.getTodos().map(
+          (todoModels) => todoModels
+              .map(
+                (todoModel) => Todo.fromModel(todoModel),
+              )
+              .toList(),
+        );
+  }
+
+  @override
+  Stream<List<Todo>> readCompletedTodos() async* {
+    yield* todoLocalDataSource.getCompletedTodos().map(
+          (todoModels) => todoModels
+          .map(
+            (todoModel) => Todo.fromModel(todoModel),
+      )
+          .toList(),
+    );
   }
 
   @override
@@ -30,4 +46,6 @@ class TodoRepositoryImplementation implements TodoRepository {
     final todoModel = TodoModel.fromDomain(todo);
     await todoLocalDataSource.removeTodo(todoModel);
   }
+
+
 }

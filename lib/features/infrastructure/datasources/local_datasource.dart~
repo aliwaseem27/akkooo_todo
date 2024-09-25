@@ -9,10 +9,7 @@ class TodoLocalDataSource {
   }
 
   Stream<List<TodoModel>> getCompletedTodos(){
-    return isar.todoModels
-        .filter()
-        .isCompletedEqualTo(true)
-        .watch(fireImmediately: true);
+    return isar.todoModels.where()..watch(fireImmediately: true);
   }
 
   Future<void> addTodo(TodoModel todo) async {
