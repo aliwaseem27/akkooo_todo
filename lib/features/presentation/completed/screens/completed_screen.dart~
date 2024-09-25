@@ -1,5 +1,4 @@
 import 'package:akkooo_todo/core/constants/app_colors.dart';
-import 'package:akkooo_todo/injection.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -13,12 +12,12 @@ import '../widgets/completed_todos_list_view.dart';
 
 @RoutePage()
 class CompletedScreen extends StatelessWidget {
-  const CompletedScreen({super.key});
+  final TodoRepository _todoRepository = TodoRepositoryImplementation();
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<TodoBloc>()..add(const TodoEvent.watchCompletedStarted()),
+      create: (context) => TodoBloc(_todoRepository)..add(const TodoEvent.watchCompletedStarted()),
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(AppSizes.defaultSpace),
@@ -28,10 +27,10 @@ class CompletedScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(context.tr('completedTasks')),
+                   Text(context.tr('completedTasks')),
                   TextButton(
                     onPressed: () {},
-                    child: Text(
+                    child:  Text(
                       context.tr('deleteAll'),
                       style: TextStyle(color: AppColors.warning),
                     ),

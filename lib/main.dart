@@ -1,4 +1,5 @@
 import 'package:akkooo_todo/features/infrastructure/models/todo_model.dart';
+import 'package:akkooo_todo/injection.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,6 +14,7 @@ late Isar isar;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+  configureDependencies();
 
   final dir = await getApplicationDocumentsDirectory();
 
@@ -23,8 +25,6 @@ Future<void> main() async {
     );
   }
 
-  Bloc.observer = PrettyBlocObserver();
-
   runApp(
     EasyLocalization(
       supportedLocales: const [Locale('en', 'US'), Locale('ar', 'EG')],
@@ -33,4 +33,6 @@ Future<void> main() async {
       child: MyApp(),
     ),
   );
+
+  Bloc.observer = PrettyBlocObserver();
 }

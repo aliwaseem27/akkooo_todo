@@ -1,9 +1,11 @@
 import 'package:akkooo_todo/features/domain/entities/todo.dart';
 import 'package:akkooo_todo/features/infrastructure/datasources/local_datasource.dart';
+import 'package:injectable/injectable.dart';
 
 import '../../domain/repositories/todo_repository.dart';
 import '../models/todo_model.dart';
 
+@LazySingleton(as: TodoRepository)
 class TodoRepositoryImplementation implements TodoRepository {
   final todoLocalDataSource = TodoLocalDataSource();
 
@@ -28,11 +30,11 @@ class TodoRepositoryImplementation implements TodoRepository {
   Stream<List<Todo>> readCompletedTodos() async* {
     yield* todoLocalDataSource.getCompletedTodos().map(
           (todoModels) => todoModels
-          .map(
-            (todoModel) => Todo.fromModel(todoModel),
-      )
-          .toList(),
-    );
+              .map(
+                (todoModel) => Todo.fromModel(todoModel),
+              )
+              .toList(),
+        );
   }
 
   @override
@@ -46,6 +48,4 @@ class TodoRepositoryImplementation implements TodoRepository {
     final todoModel = TodoModel.fromDomain(todo);
     await todoLocalDataSource.removeTodo(todoModel);
   }
-
-
 }

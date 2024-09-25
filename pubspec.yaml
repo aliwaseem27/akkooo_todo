@@ -23,6 +23,7 @@ dependencies:
   pretty_bloc_observer: ^1.0.4
   injectable: ^2.4.4
   easy_localization: ^3.0.7
+  get_it: ^7.7.0
 
 dev_dependencies:
   flutter_test:

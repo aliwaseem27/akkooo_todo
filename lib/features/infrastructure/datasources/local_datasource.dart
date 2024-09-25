@@ -1,8 +1,10 @@
 import 'package:akkooo_todo/features/infrastructure/models/todo_model.dart';
+import 'package:injectable/injectable.dart';
 import 'package:isar/isar.dart';
 
 import '../../../main.dart';
 
+@injectable
 class TodoLocalDataSource {
   Stream<List<TodoModel>> getTodos() async* {
      yield* isar.todoModels.where().watch(fireImmediately: true);
