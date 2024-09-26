@@ -19,32 +19,38 @@ mixin _$ThemeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() toggle,
+    required TResult Function() loadTheme,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? toggle,
+    TResult? Function()? loadTheme,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? toggle,
+    TResult Function()? loadTheme,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ToggleThemeEvent value) toggle,
+    required TResult Function(_LoadThemeEvent value) loadTheme,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ToggleThemeEvent value)? toggle,
+    TResult? Function(_LoadThemeEvent value)? loadTheme,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ToggleThemeEvent value)? toggle,
+    TResult Function(_LoadThemeEvent value)? loadTheme,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -113,6 +119,7 @@ class _$ToggleThemeEventImpl implements _ToggleThemeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() toggle,
+    required TResult Function() loadTheme,
   }) {
     return toggle();
   }
@@ -121,6 +128,7 @@ class _$ToggleThemeEventImpl implements _ToggleThemeEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? toggle,
+    TResult? Function()? loadTheme,
   }) {
     return toggle?.call();
   }
@@ -129,6 +137,7 @@ class _$ToggleThemeEventImpl implements _ToggleThemeEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? toggle,
+    TResult Function()? loadTheme,
     required TResult orElse(),
   }) {
     if (toggle != null) {
@@ -141,6 +150,7 @@ class _$ToggleThemeEventImpl implements _ToggleThemeEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_ToggleThemeEvent value) toggle,
+    required TResult Function(_LoadThemeEvent value) loadTheme,
   }) {
     return toggle(this);
   }
@@ -149,6 +159,7 @@ class _$ToggleThemeEventImpl implements _ToggleThemeEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_ToggleThemeEvent value)? toggle,
+    TResult? Function(_LoadThemeEvent value)? loadTheme,
   }) {
     return toggle?.call(this);
   }
@@ -157,6 +168,7 @@ class _$ToggleThemeEventImpl implements _ToggleThemeEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_ToggleThemeEvent value)? toggle,
+    TResult Function(_LoadThemeEvent value)? loadTheme,
     required TResult orElse(),
   }) {
     if (toggle != null) {
@@ -168,6 +180,111 @@ class _$ToggleThemeEventImpl implements _ToggleThemeEvent {
 
 abstract class _ToggleThemeEvent implements ThemeEvent {
   const factory _ToggleThemeEvent() = _$ToggleThemeEventImpl;
+}
+
+/// @nodoc
+abstract class _$$LoadThemeEventImplCopyWith<$Res> {
+  factory _$$LoadThemeEventImplCopyWith(_$LoadThemeEventImpl value,
+          $Res Function(_$LoadThemeEventImpl) then) =
+      __$$LoadThemeEventImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LoadThemeEventImplCopyWithImpl<$Res>
+    extends _$ThemeEventCopyWithImpl<$Res, _$LoadThemeEventImpl>
+    implements _$$LoadThemeEventImplCopyWith<$Res> {
+  __$$LoadThemeEventImplCopyWithImpl(
+      _$LoadThemeEventImpl _value, $Res Function(_$LoadThemeEventImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of ThemeEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$LoadThemeEventImpl implements _LoadThemeEvent {
+  const _$LoadThemeEventImpl();
+
+  @override
+  String toString() {
+    return 'ThemeEvent.loadTheme()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LoadThemeEventImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() toggle,
+    required TResult Function() loadTheme,
+  }) {
+    return loadTheme();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? toggle,
+    TResult? Function()? loadTheme,
+  }) {
+    return loadTheme?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? toggle,
+    TResult Function()? loadTheme,
+    required TResult orElse(),
+  }) {
+    if (loadTheme != null) {
+      return loadTheme();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_ToggleThemeEvent value) toggle,
+    required TResult Function(_LoadThemeEvent value) loadTheme,
+  }) {
+    return loadTheme(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_ToggleThemeEvent value)? toggle,
+    TResult? Function(_LoadThemeEvent value)? loadTheme,
+  }) {
+    return loadTheme?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_ToggleThemeEvent value)? toggle,
+    TResult Function(_LoadThemeEvent value)? loadTheme,
+    required TResult orElse(),
+  }) {
+    if (loadTheme != null) {
+      return loadTheme(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadThemeEvent implements ThemeEvent {
+  const factory _LoadThemeEvent() = _$LoadThemeEventImpl;
 }
 
 /// @nodoc

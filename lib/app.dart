@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<ThemeBloc>(
-          create: (context) => getIt<ThemeBloc>(),
+          create: (context) => getIt<ThemeBloc>()..add(const ThemeEvent.loadTheme()),
         ),
         BlocProvider<LanguageBloc>(
           create: (context) => getIt<LanguageBloc>()..add(LanguageEvent.loadInitialLocal(context)),
