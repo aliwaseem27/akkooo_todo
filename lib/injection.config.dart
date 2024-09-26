@@ -50,14 +50,14 @@ extension GetItInjectableX on _i174.GetIt {
         () => _i477.TodoRepositoryImplementation());
     gh.factory<_i127.ThemeLocalDataSource>(
         () => _i127.ThemeLocalDataSource(gh<_i460.SharedPreferences>()));
-    gh.lazySingleton<_i239.ThemeRepository>(
+    gh.lazySingleton<_i239.IThemeRepository>(
         () => _i246.ThemeRepositoryImpl(gh<_i127.ThemeLocalDataSource>()));
     gh.factory<_i692.TodoActorBloc>(
         () => _i692.TodoActorBloc(gh<_i610.ITodoRepository>()));
     gh.factory<_i240.TodoBloc>(
         () => _i240.TodoBloc(gh<_i610.ITodoRepository>()));
     gh.factory<_i1044.ThemeBloc>(
-        () => _i1044.ThemeBloc(gh<_i239.ThemeRepository>()));
+        () => _i1044.ThemeBloc(gh<_i239.IThemeRepository>()));
     return this;
   }
 }

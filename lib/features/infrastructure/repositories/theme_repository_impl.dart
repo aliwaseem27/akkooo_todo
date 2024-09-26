@@ -3,8 +3,8 @@ import 'package:injectable/injectable.dart';
 import '../../domain/repositories/theme_repository.dart';
 import '../datasources/theme_local_datasource.dart';
 
-@LazySingleton(as: ThemeRepository)
-class ThemeRepositoryImpl implements ThemeRepository {
+@LazySingleton(as: IThemeRepository)
+class ThemeRepositoryImpl implements IThemeRepository {
   final ThemeLocalDataSource localDataSource;
 
   ThemeRepositoryImpl(this.localDataSource);

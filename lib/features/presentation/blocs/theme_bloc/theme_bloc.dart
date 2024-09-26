@@ -13,7 +13,7 @@ part 'theme_bloc.freezed.dart';
 
 @injectable
 class ThemeBloc extends Bloc<ThemeEvent, ThemeState> {
-  final ThemeRepository _themeRepository;
+  final IThemeRepository _themeRepository;
 
   ThemeBloc(this._themeRepository) : super(const ThemeState.light()) {
     on<_ToggleThemeEvent>((event, emit) async {
