@@ -27,8 +27,8 @@ class SearchBarWidget extends StatelessWidget {
             onPressed: () {},
           ),
           hintText: context.tr('search'),
-          enabledBorder: const OutlineInputBorder(borderSide: BorderSide(color: AppColors.neutralColor)),
-          focusedBorder: const OutlineInputBorder(borderSide: BorderSide(color: AppColors.primaryColor)),
+          enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: AppColors.primaryColor)),
+          focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: AppColors.primaryColor)),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(AppSizes.borderRadiusMd),
           ),

@@ -21,8 +21,8 @@ class CreateScreen extends StatelessWidget {
       child: Container(
         height: MediaQuery.of(context).size.height * 0.5,
         padding: const EdgeInsets.all(AppSizes.defaultSpace),
-        decoration: BoxDecoration(
-          borderRadius: const BorderRadius.only(
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.only(
             topLeft: Radius.circular(AppSizes.borderRadiusLg),
             topRight: Radius.circular(AppSizes.borderRadiusLg),
           ),

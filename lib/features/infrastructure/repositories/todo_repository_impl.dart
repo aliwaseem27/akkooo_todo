@@ -48,4 +48,9 @@ class TodoRepositoryImplementation implements ITodoRepository {
     final todoModel = TodoModel.fromDomain(todo);
     await todoLocalDataSource.removeTodo(todoModel);
   }
+
+  @override
+  Future<void> deleteAllCompletedTodos() async {
+    await todoLocalDataSource.deleteAllCompletedTodos();
+  }
 }

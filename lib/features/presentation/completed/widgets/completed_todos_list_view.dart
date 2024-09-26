@@ -1,10 +1,10 @@
 import 'package:akkooo_todo/features/presentation/completed/widgets/no_completed_todos.dart';
+import 'package:akkooo_todo/features/presentation/create/blocs/todo_actor_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_sizes.dart';
-import '../../../domain/entities/todo.dart';
 import '../../common/widgets/todo_widget.dart';
 import '../../home/blocs/todo_bloc.dart';
 
@@ -31,7 +31,9 @@ class completed_todos_list_view extends StatelessWidget {
                     return TodoWidget(
                       todo: todo,
                       actionIconButton: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          context.read<TodoActorBloc>().add(TodoActorEvent.deleteTodo(todo));
+                        },
                         icon: const Icon(
                           Icons.delete,
                           color: AppColors.warning,

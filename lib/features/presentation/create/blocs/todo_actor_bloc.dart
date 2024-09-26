@@ -23,6 +23,7 @@ class TodoActorBloc extends Bloc<TodoActorEvent, TodoActorState> {
     on<_TodoTitleChanged>(_onTodoTitleChanged);
     on<_TodoNoteChanged>(_onTodoNoteChanged);
     on<_TodoSaved>(_onTodoSaved);
+    on<_DeleteAllCompletedTodos>(_onDeleteAllCompletedTodos);
   }
 
   Future<void> _onTodoTitleChanged(_TodoTitleChanged event, Emitter<TodoActorState> emit) async {
@@ -82,6 +83,14 @@ class TodoActorBloc extends Bloc<TodoActorEvent, TodoActorState> {
   Future<void> _onDeleteTodo(_DeleteTodo event, Emitter<TodoActorState> emit) async {
     try {
       await _todoRepository.deleteTodo(event.todo);
+    } catch (e) {
+      debugPrint(e.toString());
+    }
+  }
+
+  Future<void> _onDeleteAllCompletedTodos(_DeleteAllCompletedTodos event, Emitter<TodoActorState> emit) async {
+    try {
+      await _todoRepository.deleteAllCompletedTodos();
     } catch (e) {
       debugPrint(e.toString());
     }

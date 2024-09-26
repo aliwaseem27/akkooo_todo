@@ -22,7 +22,6 @@ class TodoBloc extends Bloc<TodoEvent, TodoState> {
     on<_WatchAllStarted>(_onWatchAllStarted);
     on<_WatchCompletedStarted>(_onWatchCompletedStarted);
     on<_TodosReceived>(_onTodosReceived);
-    on<_ToggleCompleted>(_onToggleCompleted);
   }
 
   Future<void> _onWatchCompletedStarted(_WatchCompletedStarted event, Emitter<TodoState> emit) async {
@@ -52,14 +51,6 @@ class TodoBloc extends Bloc<TodoEvent, TodoState> {
   Future<void> _onTodosReceived(_TodosReceived event, Emitter<TodoState> emit) async {
     try {
       emit(TodoState.loadSuccess(event.todos));
-    } catch (e) {
-      emit(TodoState.error(e.toString()));
-    }
-  }
-
-  Future<void> _onToggleCompleted(_ToggleCompleted event, Emitter<TodoState> emit) async {
-    try {
-      await _todoRepository.updateTodo(event.todo.copyWith(isCompleted: !event.todo.isCompleted));
     } catch (e) {
       emit(TodoState.error(e.toString()));
     }

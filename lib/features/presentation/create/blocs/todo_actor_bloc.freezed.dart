@@ -24,6 +24,7 @@ mixin _$TodoActorEvent {
     required TResult Function() saved,
     required TResult Function(Todo todo) updateTodo,
     required TResult Function(Todo todo) deleteTodo,
+    required TResult Function() deleteAllCompletedTodos,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,6 +35,7 @@ mixin _$TodoActorEvent {
     TResult? Function()? saved,
     TResult? Function(Todo todo)? updateTodo,
     TResult? Function(Todo todo)? deleteTodo,
+    TResult? Function()? deleteAllCompletedTodos,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +46,7 @@ mixin _$TodoActorEvent {
     TResult Function()? saved,
     TResult Function(Todo todo)? updateTodo,
     TResult Function(Todo todo)? deleteTodo,
+    TResult Function()? deleteAllCompletedTodos,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -55,6 +58,8 @@ mixin _$TodoActorEvent {
     required TResult Function(_TodoSaved value) saved,
     required TResult Function(_UpdateTodo value) updateTodo,
     required TResult Function(_DeleteTodo value) deleteTodo,
+    required TResult Function(_DeleteAllCompletedTodos value)
+        deleteAllCompletedTodos,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,6 +70,7 @@ mixin _$TodoActorEvent {
     TResult? Function(_TodoSaved value)? saved,
     TResult? Function(_UpdateTodo value)? updateTodo,
     TResult? Function(_DeleteTodo value)? deleteTodo,
+    TResult? Function(_DeleteAllCompletedTodos value)? deleteAllCompletedTodos,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -75,6 +81,7 @@ mixin _$TodoActorEvent {
     TResult Function(_TodoSaved value)? saved,
     TResult Function(_UpdateTodo value)? updateTodo,
     TResult Function(_DeleteTodo value)? deleteTodo,
+    TResult Function(_DeleteAllCompletedTodos value)? deleteAllCompletedTodos,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -191,6 +198,7 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function() saved,
     required TResult Function(Todo todo) updateTodo,
     required TResult Function(Todo todo) deleteTodo,
+    required TResult Function() deleteAllCompletedTodos,
   }) {
     return initialized(todo);
   }
@@ -204,6 +212,7 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function()? saved,
     TResult? Function(Todo todo)? updateTodo,
     TResult? Function(Todo todo)? deleteTodo,
+    TResult? Function()? deleteAllCompletedTodos,
   }) {
     return initialized?.call(todo);
   }
@@ -217,6 +226,7 @@ class _$InitializedImpl implements _Initialized {
     TResult Function()? saved,
     TResult Function(Todo todo)? updateTodo,
     TResult Function(Todo todo)? deleteTodo,
+    TResult Function()? deleteAllCompletedTodos,
     required TResult orElse(),
   }) {
     if (initialized != null) {
@@ -234,6 +244,8 @@ class _$InitializedImpl implements _Initialized {
     required TResult Function(_TodoSaved value) saved,
     required TResult Function(_UpdateTodo value) updateTodo,
     required TResult Function(_DeleteTodo value) deleteTodo,
+    required TResult Function(_DeleteAllCompletedTodos value)
+        deleteAllCompletedTodos,
   }) {
     return initialized(this);
   }
@@ -247,6 +259,7 @@ class _$InitializedImpl implements _Initialized {
     TResult? Function(_TodoSaved value)? saved,
     TResult? Function(_UpdateTodo value)? updateTodo,
     TResult? Function(_DeleteTodo value)? deleteTodo,
+    TResult? Function(_DeleteAllCompletedTodos value)? deleteAllCompletedTodos,
   }) {
     return initialized?.call(this);
   }
@@ -260,6 +273,7 @@ class _$InitializedImpl implements _Initialized {
     TResult Function(_TodoSaved value)? saved,
     TResult Function(_UpdateTodo value)? updateTodo,
     TResult Function(_DeleteTodo value)? deleteTodo,
+    TResult Function(_DeleteAllCompletedTodos value)? deleteAllCompletedTodos,
     required TResult orElse(),
   }) {
     if (initialized != null) {
@@ -356,6 +370,7 @@ class _$TodoTitleChangedImpl implements _TodoTitleChanged {
     required TResult Function() saved,
     required TResult Function(Todo todo) updateTodo,
     required TResult Function(Todo todo) deleteTodo,
+    required TResult Function() deleteAllCompletedTodos,
   }) {
     return todoTitleChanged(title);
   }
@@ -369,6 +384,7 @@ class _$TodoTitleChangedImpl implements _TodoTitleChanged {
     TResult? Function()? saved,
     TResult? Function(Todo todo)? updateTodo,
     TResult? Function(Todo todo)? deleteTodo,
+    TResult? Function()? deleteAllCompletedTodos,
   }) {
     return todoTitleChanged?.call(title);
   }
@@ -382,6 +398,7 @@ class _$TodoTitleChangedImpl implements _TodoTitleChanged {
     TResult Function()? saved,
     TResult Function(Todo todo)? updateTodo,
     TResult Function(Todo todo)? deleteTodo,
+    TResult Function()? deleteAllCompletedTodos,
     required TResult orElse(),
   }) {
     if (todoTitleChanged != null) {
@@ -399,6 +416,8 @@ class _$TodoTitleChangedImpl implements _TodoTitleChanged {
     required TResult Function(_TodoSaved value) saved,
     required TResult Function(_UpdateTodo value) updateTodo,
     required TResult Function(_DeleteTodo value) deleteTodo,
+    required TResult Function(_DeleteAllCompletedTodos value)
+        deleteAllCompletedTodos,
   }) {
     return todoTitleChanged(this);
   }
@@ -412,6 +431,7 @@ class _$TodoTitleChangedImpl implements _TodoTitleChanged {
     TResult? Function(_TodoSaved value)? saved,
     TResult? Function(_UpdateTodo value)? updateTodo,
     TResult? Function(_DeleteTodo value)? deleteTodo,
+    TResult? Function(_DeleteAllCompletedTodos value)? deleteAllCompletedTodos,
   }) {
     return todoTitleChanged?.call(this);
   }
@@ -425,6 +445,7 @@ class _$TodoTitleChangedImpl implements _TodoTitleChanged {
     TResult Function(_TodoSaved value)? saved,
     TResult Function(_UpdateTodo value)? updateTodo,
     TResult Function(_DeleteTodo value)? deleteTodo,
+    TResult Function(_DeleteAllCompletedTodos value)? deleteAllCompletedTodos,
     required TResult orElse(),
   }) {
     if (todoTitleChanged != null) {
@@ -521,6 +542,7 @@ class _$TodoNoteChangedImpl implements _TodoNoteChanged {
     required TResult Function() saved,
     required TResult Function(Todo todo) updateTodo,
     required TResult Function(Todo todo) deleteTodo,
+    required TResult Function() deleteAllCompletedTodos,
   }) {
     return todoNoteChanged(note);
   }
@@ -534,6 +556,7 @@ class _$TodoNoteChangedImpl implements _TodoNoteChanged {
     TResult? Function()? saved,
     TResult? Function(Todo todo)? updateTodo,
     TResult? Function(Todo todo)? deleteTodo,
+    TResult? Function()? deleteAllCompletedTodos,
   }) {
     return todoNoteChanged?.call(note);
   }
@@ -547,6 +570,7 @@ class _$TodoNoteChangedImpl implements _TodoNoteChanged {
     TResult Function()? saved,
     TResult Function(Todo todo)? updateTodo,
     TResult Function(Todo todo)? deleteTodo,
+    TResult Function()? deleteAllCompletedTodos,
     required TResult orElse(),
   }) {
     if (todoNoteChanged != null) {
@@ -564,6 +588,8 @@ class _$TodoNoteChangedImpl implements _TodoNoteChanged {
     required TResult Function(_TodoSaved value) saved,
     required TResult Function(_UpdateTodo value) updateTodo,
     required TResult Function(_DeleteTodo value) deleteTodo,
+    required TResult Function(_DeleteAllCompletedTodos value)
+        deleteAllCompletedTodos,
   }) {
     return todoNoteChanged(this);
   }
@@ -577,6 +603,7 @@ class _$TodoNoteChangedImpl implements _TodoNoteChanged {
     TResult? Function(_TodoSaved value)? saved,
     TResult? Function(_UpdateTodo value)? updateTodo,
     TResult? Function(_DeleteTodo value)? deleteTodo,
+    TResult? Function(_DeleteAllCompletedTodos value)? deleteAllCompletedTodos,
   }) {
     return todoNoteChanged?.call(this);
   }
@@ -590,6 +617,7 @@ class _$TodoNoteChangedImpl implements _TodoNoteChanged {
     TResult Function(_TodoSaved value)? saved,
     TResult Function(_UpdateTodo value)? updateTodo,
     TResult Function(_DeleteTodo value)? deleteTodo,
+    TResult Function(_DeleteAllCompletedTodos value)? deleteAllCompletedTodos,
     required TResult orElse(),
   }) {
     if (todoNoteChanged != null) {
@@ -658,6 +686,7 @@ class _$TodoSavedImpl implements _TodoSaved {
     required TResult Function() saved,
     required TResult Function(Todo todo) updateTodo,
     required TResult Function(Todo todo) deleteTodo,
+    required TResult Function() deleteAllCompletedTodos,
   }) {
     return saved();
   }
@@ -671,6 +700,7 @@ class _$TodoSavedImpl implements _TodoSaved {
     TResult? Function()? saved,
     TResult? Function(Todo todo)? updateTodo,
     TResult? Function(Todo todo)? deleteTodo,
+    TResult? Function()? deleteAllCompletedTodos,
   }) {
     return saved?.call();
   }
@@ -684,6 +714,7 @@ class _$TodoSavedImpl implements _TodoSaved {
     TResult Function()? saved,
     TResult Function(Todo todo)? updateTodo,
     TResult Function(Todo todo)? deleteTodo,
+    TResult Function()? deleteAllCompletedTodos,
     required TResult orElse(),
   }) {
     if (saved != null) {
@@ -701,6 +732,8 @@ class _$TodoSavedImpl implements _TodoSaved {
     required TResult Function(_TodoSaved value) saved,
     required TResult Function(_UpdateTodo value) updateTodo,
     required TResult Function(_DeleteTodo value) deleteTodo,
+    required TResult Function(_DeleteAllCompletedTodos value)
+        deleteAllCompletedTodos,
   }) {
     return saved(this);
   }
@@ -714,6 +747,7 @@ class _$TodoSavedImpl implements _TodoSaved {
     TResult? Function(_TodoSaved value)? saved,
     TResult? Function(_UpdateTodo value)? updateTodo,
     TResult? Function(_DeleteTodo value)? deleteTodo,
+    TResult? Function(_DeleteAllCompletedTodos value)? deleteAllCompletedTodos,
   }) {
     return saved?.call(this);
   }
@@ -727,6 +761,7 @@ class _$TodoSavedImpl implements _TodoSaved {
     TResult Function(_TodoSaved value)? saved,
     TResult Function(_UpdateTodo value)? updateTodo,
     TResult Function(_DeleteTodo value)? deleteTodo,
+    TResult Function(_DeleteAllCompletedTodos value)? deleteAllCompletedTodos,
     required TResult orElse(),
   }) {
     if (saved != null) {
@@ -826,6 +861,7 @@ class _$UpdateTodoImpl implements _UpdateTodo {
     required TResult Function() saved,
     required TResult Function(Todo todo) updateTodo,
     required TResult Function(Todo todo) deleteTodo,
+    required TResult Function() deleteAllCompletedTodos,
   }) {
     return updateTodo(todo);
   }
@@ -839,6 +875,7 @@ class _$UpdateTodoImpl implements _UpdateTodo {
     TResult? Function()? saved,
     TResult? Function(Todo todo)? updateTodo,
     TResult? Function(Todo todo)? deleteTodo,
+    TResult? Function()? deleteAllCompletedTodos,
   }) {
     return updateTodo?.call(todo);
   }
@@ -852,6 +889,7 @@ class _$UpdateTodoImpl implements _UpdateTodo {
     TResult Function()? saved,
     TResult Function(Todo todo)? updateTodo,
     TResult Function(Todo todo)? deleteTodo,
+    TResult Function()? deleteAllCompletedTodos,
     required TResult orElse(),
   }) {
     if (updateTodo != null) {
@@ -869,6 +907,8 @@ class _$UpdateTodoImpl implements _UpdateTodo {
     required TResult Function(_TodoSaved value) saved,
     required TResult Function(_UpdateTodo value) updateTodo,
     required TResult Function(_DeleteTodo value) deleteTodo,
+    required TResult Function(_DeleteAllCompletedTodos value)
+        deleteAllCompletedTodos,
   }) {
     return updateTodo(this);
   }
@@ -882,6 +922,7 @@ class _$UpdateTodoImpl implements _UpdateTodo {
     TResult? Function(_TodoSaved value)? saved,
     TResult? Function(_UpdateTodo value)? updateTodo,
     TResult? Function(_DeleteTodo value)? deleteTodo,
+    TResult? Function(_DeleteAllCompletedTodos value)? deleteAllCompletedTodos,
   }) {
     return updateTodo?.call(this);
   }
@@ -895,6 +936,7 @@ class _$UpdateTodoImpl implements _UpdateTodo {
     TResult Function(_TodoSaved value)? saved,
     TResult Function(_UpdateTodo value)? updateTodo,
     TResult Function(_DeleteTodo value)? deleteTodo,
+    TResult Function(_DeleteAllCompletedTodos value)? deleteAllCompletedTodos,
     required TResult orElse(),
   }) {
     if (updateTodo != null) {
@@ -1002,6 +1044,7 @@ class _$DeleteTodoImpl implements _DeleteTodo {
     required TResult Function() saved,
     required TResult Function(Todo todo) updateTodo,
     required TResult Function(Todo todo) deleteTodo,
+    required TResult Function() deleteAllCompletedTodos,
   }) {
     return deleteTodo(todo);
   }
@@ -1015,6 +1058,7 @@ class _$DeleteTodoImpl implements _DeleteTodo {
     TResult? Function()? saved,
     TResult? Function(Todo todo)? updateTodo,
     TResult? Function(Todo todo)? deleteTodo,
+    TResult? Function()? deleteAllCompletedTodos,
   }) {
     return deleteTodo?.call(todo);
   }
@@ -1028,6 +1072,7 @@ class _$DeleteTodoImpl implements _DeleteTodo {
     TResult Function()? saved,
     TResult Function(Todo todo)? updateTodo,
     TResult Function(Todo todo)? deleteTodo,
+    TResult Function()? deleteAllCompletedTodos,
     required TResult orElse(),
   }) {
     if (deleteTodo != null) {
@@ -1045,6 +1090,8 @@ class _$DeleteTodoImpl implements _DeleteTodo {
     required TResult Function(_TodoSaved value) saved,
     required TResult Function(_UpdateTodo value) updateTodo,
     required TResult Function(_DeleteTodo value) deleteTodo,
+    required TResult Function(_DeleteAllCompletedTodos value)
+        deleteAllCompletedTodos,
   }) {
     return deleteTodo(this);
   }
@@ -1058,6 +1105,7 @@ class _$DeleteTodoImpl implements _DeleteTodo {
     TResult? Function(_TodoSaved value)? saved,
     TResult? Function(_UpdateTodo value)? updateTodo,
     TResult? Function(_DeleteTodo value)? deleteTodo,
+    TResult? Function(_DeleteAllCompletedTodos value)? deleteAllCompletedTodos,
   }) {
     return deleteTodo?.call(this);
   }
@@ -1071,6 +1119,7 @@ class _$DeleteTodoImpl implements _DeleteTodo {
     TResult Function(_TodoSaved value)? saved,
     TResult Function(_UpdateTodo value)? updateTodo,
     TResult Function(_DeleteTodo value)? deleteTodo,
+    TResult Function(_DeleteAllCompletedTodos value)? deleteAllCompletedTodos,
     required TResult orElse(),
   }) {
     if (deleteTodo != null) {
@@ -1090,6 +1139,145 @@ abstract class _DeleteTodo implements TodoActorEvent {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DeleteTodoImplCopyWith<_$DeleteTodoImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DeleteAllCompletedTodosImplCopyWith<$Res> {
+  factory _$$DeleteAllCompletedTodosImplCopyWith(
+          _$DeleteAllCompletedTodosImpl value,
+          $Res Function(_$DeleteAllCompletedTodosImpl) then) =
+      __$$DeleteAllCompletedTodosImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$DeleteAllCompletedTodosImplCopyWithImpl<$Res>
+    extends _$TodoActorEventCopyWithImpl<$Res, _$DeleteAllCompletedTodosImpl>
+    implements _$$DeleteAllCompletedTodosImplCopyWith<$Res> {
+  __$$DeleteAllCompletedTodosImplCopyWithImpl(
+      _$DeleteAllCompletedTodosImpl _value,
+      $Res Function(_$DeleteAllCompletedTodosImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of TodoActorEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$DeleteAllCompletedTodosImpl implements _DeleteAllCompletedTodos {
+  const _$DeleteAllCompletedTodosImpl();
+
+  @override
+  String toString() {
+    return 'TodoActorEvent.deleteAllCompletedTodos()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DeleteAllCompletedTodosImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(Todo? todo) initialized,
+    required TResult Function(String title) todoTitleChanged,
+    required TResult Function(String note) todoNoteChanged,
+    required TResult Function() saved,
+    required TResult Function(Todo todo) updateTodo,
+    required TResult Function(Todo todo) deleteTodo,
+    required TResult Function() deleteAllCompletedTodos,
+  }) {
+    return deleteAllCompletedTodos();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Todo? todo)? initialized,
+    TResult? Function(String title)? todoTitleChanged,
+    TResult? Function(String note)? todoNoteChanged,
+    TResult? Function()? saved,
+    TResult? Function(Todo todo)? updateTodo,
+    TResult? Function(Todo todo)? deleteTodo,
+    TResult? Function()? deleteAllCompletedTodos,
+  }) {
+    return deleteAllCompletedTodos?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Todo? todo)? initialized,
+    TResult Function(String title)? todoTitleChanged,
+    TResult Function(String note)? todoNoteChanged,
+    TResult Function()? saved,
+    TResult Function(Todo todo)? updateTodo,
+    TResult Function(Todo todo)? deleteTodo,
+    TResult Function()? deleteAllCompletedTodos,
+    required TResult orElse(),
+  }) {
+    if (deleteAllCompletedTodos != null) {
+      return deleteAllCompletedTodos();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initialized value) initialized,
+    required TResult Function(_TodoTitleChanged value) todoTitleChanged,
+    required TResult Function(_TodoNoteChanged value) todoNoteChanged,
+    required TResult Function(_TodoSaved value) saved,
+    required TResult Function(_UpdateTodo value) updateTodo,
+    required TResult Function(_DeleteTodo value) deleteTodo,
+    required TResult Function(_DeleteAllCompletedTodos value)
+        deleteAllCompletedTodos,
+  }) {
+    return deleteAllCompletedTodos(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initialized value)? initialized,
+    TResult? Function(_TodoTitleChanged value)? todoTitleChanged,
+    TResult? Function(_TodoNoteChanged value)? todoNoteChanged,
+    TResult? Function(_TodoSaved value)? saved,
+    TResult? Function(_UpdateTodo value)? updateTodo,
+    TResult? Function(_DeleteTodo value)? deleteTodo,
+    TResult? Function(_DeleteAllCompletedTodos value)? deleteAllCompletedTodos,
+  }) {
+    return deleteAllCompletedTodos?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initialized value)? initialized,
+    TResult Function(_TodoTitleChanged value)? todoTitleChanged,
+    TResult Function(_TodoNoteChanged value)? todoNoteChanged,
+    TResult Function(_TodoSaved value)? saved,
+    TResult Function(_UpdateTodo value)? updateTodo,
+    TResult Function(_DeleteTodo value)? deleteTodo,
+    TResult Function(_DeleteAllCompletedTodos value)? deleteAllCompletedTodos,
+    required TResult orElse(),
+  }) {
+    if (deleteAllCompletedTodos != null) {
+      return deleteAllCompletedTodos(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DeleteAllCompletedTodos implements TodoActorEvent {
+  const factory _DeleteAllCompletedTodos() = _$DeleteAllCompletedTodosImpl;
 }
 
 /// @nodoc

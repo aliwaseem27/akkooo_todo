@@ -5,8 +5,10 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/image_strings.dart';
-import '../../../domain/entities/todo.dart';
-import '../../common/widgets/todo_widget.dart';
+
+////////////////////////////////////////////////////////////
+//////////// THIS SCREEN UNDER DEVELOPMENT /////////////////
+////////////////////////////////////////////////////////////
 
 @RoutePage()
 class SearchScreen extends StatelessWidget {
@@ -14,14 +16,7 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final todos = [
-      const Todo(
-          title: "Dsign sigun up flow",
-          note:
-          "Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow Design the sign up flow"),
-      const Todo(title: "test wirefraem"),
-      const Todo(title: "test done task", isCompleted: true),
-    ];
+    final todos = [];
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(AppSizes.defaultSpace),
@@ -32,39 +27,39 @@ class SearchScreen extends StatelessWidget {
             const SizedBox(height: AppSizes.spaceBtwSections),
 
             // List of Todos
-            Expanded(
-              child: ListView.separated(
-                itemCount: todos.length,
-                shrinkWrap: true,
-                // physics: const NeverScrollableScrollPhysics(),
-                itemBuilder: (context, index) {
-                  final todo = todos[index];
-                  return TodoWidget(todo: todo);
-                },
-                separatorBuilder: (context, index) {
-                  return const SizedBox(height: AppSizes.spaceBtwItems);
-                },
-              ),
-            ),
+            // Expanded(
+            //   child: ListView.separated(
+            //     itemCount: todos.length,
+            //     shrinkWrap: true,
+            //     // physics: const NeverScrollableScrollPhysics(),
+            //     itemBuilder: (context, index) {
+            //       final todo = todos[index];
+            //       return TodoWidget(todo: todo);
+            //     },
+            //     separatorBuilder: (context, index) {
+            //       return const SizedBox(height: AppSizes.spaceBtwItems);
+            //     },
+            //   ),
+            // ),
 
-            todos.length == 3
+            todos.isEmpty
                 ? Expanded(
-              child: Align(
-                alignment: Alignment.center,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.3,
-                      child: Image.asset(ImageStrings.notes),
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.3,
+                            child: Image.asset(ImageStrings.notes),
+                          ),
+                          const SizedBox(height: AppSizes.spaceBtwSections),
+                          Text(context.tr('noResultFound')),
+                        ],
+                      ),
                     ),
-                    const SizedBox(height: AppSizes.spaceBtwSections),
-                     Text(context.tr('noResultFound')),
-                  ],
-                ),
-              ),
-            )
+                  )
                 : const SizedBox()
           ],
         ),

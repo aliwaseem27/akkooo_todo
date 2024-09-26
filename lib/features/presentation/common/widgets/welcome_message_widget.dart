@@ -2,6 +2,7 @@ import 'package:akkooo_todo/core/constants/app_colors.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
+
 class WelcomeMessageWidget extends StatelessWidget {
   const WelcomeMessageWidget({
     super.key,
@@ -27,9 +28,7 @@ class WelcomeMessageWidget extends StatelessWidget {
             ),
           ],
         ),
-        Text("${context.tr('youGot')} 7 ${context.tr('tasksToDo')}",
-          style: Theme.of(context).textTheme.titleMedium,
-        ),
+        Text(context.tr('motivational')),
       ],
     );
   }

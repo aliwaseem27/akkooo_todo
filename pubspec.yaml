@@ -57,3 +57,8 @@ flutter:
           weight: 700
         - asset: assets/fonts/Urbanist-Italic.ttf
           style: italic
+    - family: NotoKufiArabic
+      fonts:
+        - asset: assets/fonts/NotoKufiArabic-Regular.ttf
+        - asset: assets/fonts/NotoKufiArabic-Bold.ttf
+          weight: 700

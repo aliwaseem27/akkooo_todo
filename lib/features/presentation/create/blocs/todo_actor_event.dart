@@ -13,4 +13,5 @@ class TodoActorEvent with _$TodoActorEvent {
   const factory TodoActorEvent.updateTodo(Todo todo) = _UpdateTodo;
 
   const factory TodoActorEvent.deleteTodo(Todo todo) = _DeleteTodo;
+  const factory TodoActorEvent.deleteAllCompletedTodos() = _DeleteAllCompletedTodos;
 }

@@ -21,6 +21,7 @@ mixin _$TodoEvent {
     required TResult Function() watchAllStarted,
     required TResult Function() watchCompletedStarted,
     required TResult Function(List<Todo> todos) todosReceived,
+    required TResult Function(Todo todo) toggleCompleted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$TodoEvent {
     TResult? Function()? watchAllStarted,
     TResult? Function()? watchCompletedStarted,
     TResult? Function(List<Todo> todos)? todosReceived,
+    TResult? Function(Todo todo)? toggleCompleted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$TodoEvent {
     TResult Function()? watchAllStarted,
     TResult Function()? watchCompletedStarted,
     TResult Function(List<Todo> todos)? todosReceived,
+    TResult Function(Todo todo)? toggleCompleted,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -44,6 +47,7 @@ mixin _$TodoEvent {
     required TResult Function(_WatchCompletedStarted value)
         watchCompletedStarted,
     required TResult Function(_TodosReceived value) todosReceived,
+    required TResult Function(_ToggleCompleted value) toggleCompleted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,6 +55,7 @@ mixin _$TodoEvent {
     TResult? Function(_WatchAllStarted value)? watchAllStarted,
     TResult? Function(_WatchCompletedStarted value)? watchCompletedStarted,
     TResult? Function(_TodosReceived value)? todosReceived,
+    TResult? Function(_ToggleCompleted value)? toggleCompleted,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -58,6 +63,7 @@ mixin _$TodoEvent {
     TResult Function(_WatchAllStarted value)? watchAllStarted,
     TResult Function(_WatchCompletedStarted value)? watchCompletedStarted,
     TResult Function(_TodosReceived value)? todosReceived,
+    TResult Function(_ToggleCompleted value)? toggleCompleted,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,6 +133,7 @@ class _$WatchAllStartedImpl implements _WatchAllStarted {
     required TResult Function() watchAllStarted,
     required TResult Function() watchCompletedStarted,
     required TResult Function(List<Todo> todos) todosReceived,
+    required TResult Function(Todo todo) toggleCompleted,
   }) {
     return watchAllStarted();
   }
@@ -137,6 +144,7 @@ class _$WatchAllStartedImpl implements _WatchAllStarted {
     TResult? Function()? watchAllStarted,
     TResult? Function()? watchCompletedStarted,
     TResult? Function(List<Todo> todos)? todosReceived,
+    TResult? Function(Todo todo)? toggleCompleted,
   }) {
     return watchAllStarted?.call();
   }
@@ -147,6 +155,7 @@ class _$WatchAllStartedImpl implements _WatchAllStarted {
     TResult Function()? watchAllStarted,
     TResult Function()? watchCompletedStarted,
     TResult Function(List<Todo> todos)? todosReceived,
+    TResult Function(Todo todo)? toggleCompleted,
     required TResult orElse(),
   }) {
     if (watchAllStarted != null) {
@@ -162,6 +171,7 @@ class _$WatchAllStartedImpl implements _WatchAllStarted {
     required TResult Function(_WatchCompletedStarted value)
         watchCompletedStarted,
     required TResult Function(_TodosReceived value) todosReceived,
+    required TResult Function(_ToggleCompleted value) toggleCompleted,
   }) {
     return watchAllStarted(this);
   }
@@ -172,6 +182,7 @@ class _$WatchAllStartedImpl implements _WatchAllStarted {
     TResult? Function(_WatchAllStarted value)? watchAllStarted,
     TResult? Function(_WatchCompletedStarted value)? watchCompletedStarted,
     TResult? Function(_TodosReceived value)? todosReceived,
+    TResult? Function(_ToggleCompleted value)? toggleCompleted,
   }) {
     return watchAllStarted?.call(this);
   }
@@ -182,6 +193,7 @@ class _$WatchAllStartedImpl implements _WatchAllStarted {
     TResult Function(_WatchAllStarted value)? watchAllStarted,
     TResult Function(_WatchCompletedStarted value)? watchCompletedStarted,
     TResult Function(_TodosReceived value)? todosReceived,
+    TResult Function(_ToggleCompleted value)? toggleCompleted,
     required TResult orElse(),
   }) {
     if (watchAllStarted != null) {
@@ -241,6 +253,7 @@ class _$WatchCompletedStartedImpl implements _WatchCompletedStarted {
     required TResult Function() watchAllStarted,
     required TResult Function() watchCompletedStarted,
     required TResult Function(List<Todo> todos) todosReceived,
+    required TResult Function(Todo todo) toggleCompleted,
   }) {
     return watchCompletedStarted();
   }
@@ -251,6 +264,7 @@ class _$WatchCompletedStartedImpl implements _WatchCompletedStarted {
     TResult? Function()? watchAllStarted,
     TResult? Function()? watchCompletedStarted,
     TResult? Function(List<Todo> todos)? todosReceived,
+    TResult? Function(Todo todo)? toggleCompleted,
   }) {
     return watchCompletedStarted?.call();
   }
@@ -261,6 +275,7 @@ class _$WatchCompletedStartedImpl implements _WatchCompletedStarted {
     TResult Function()? watchAllStarted,
     TResult Function()? watchCompletedStarted,
     TResult Function(List<Todo> todos)? todosReceived,
+    TResult Function(Todo todo)? toggleCompleted,
     required TResult orElse(),
   }) {
     if (watchCompletedStarted != null) {
@@ -276,6 +291,7 @@ class _$WatchCompletedStartedImpl implements _WatchCompletedStarted {
     required TResult Function(_WatchCompletedStarted value)
         watchCompletedStarted,
     required TResult Function(_TodosReceived value) todosReceived,
+    required TResult Function(_ToggleCompleted value) toggleCompleted,
   }) {
     return watchCompletedStarted(this);
   }
@@ -286,6 +302,7 @@ class _$WatchCompletedStartedImpl implements _WatchCompletedStarted {
     TResult? Function(_WatchAllStarted value)? watchAllStarted,
     TResult? Function(_WatchCompletedStarted value)? watchCompletedStarted,
     TResult? Function(_TodosReceived value)? todosReceived,
+    TResult? Function(_ToggleCompleted value)? toggleCompleted,
   }) {
     return watchCompletedStarted?.call(this);
   }
@@ -296,6 +313,7 @@ class _$WatchCompletedStartedImpl implements _WatchCompletedStarted {
     TResult Function(_WatchAllStarted value)? watchAllStarted,
     TResult Function(_WatchCompletedStarted value)? watchCompletedStarted,
     TResult Function(_TodosReceived value)? todosReceived,
+    TResult Function(_ToggleCompleted value)? toggleCompleted,
     required TResult orElse(),
   }) {
     if (watchCompletedStarted != null) {
@@ -386,6 +404,7 @@ class _$TodosReceivedImpl implements _TodosReceived {
     required TResult Function() watchAllStarted,
     required TResult Function() watchCompletedStarted,
     required TResult Function(List<Todo> todos) todosReceived,
+    required TResult Function(Todo todo) toggleCompleted,
   }) {
     return todosReceived(todos);
   }
@@ -396,6 +415,7 @@ class _$TodosReceivedImpl implements _TodosReceived {
     TResult? Function()? watchAllStarted,
     TResult? Function()? watchCompletedStarted,
     TResult? Function(List<Todo> todos)? todosReceived,
+    TResult? Function(Todo todo)? toggleCompleted,
   }) {
     return todosReceived?.call(todos);
   }
@@ -406,6 +426,7 @@ class _$TodosReceivedImpl implements _TodosReceived {
     TResult Function()? watchAllStarted,
     TResult Function()? watchCompletedStarted,
     TResult Function(List<Todo> todos)? todosReceived,
+    TResult Function(Todo todo)? toggleCompleted,
     required TResult orElse(),
   }) {
     if (todosReceived != null) {
@@ -421,6 +442,7 @@ class _$TodosReceivedImpl implements _TodosReceived {
     required TResult Function(_WatchCompletedStarted value)
         watchCompletedStarted,
     required TResult Function(_TodosReceived value) todosReceived,
+    required TResult Function(_ToggleCompleted value) toggleCompleted,
   }) {
     return todosReceived(this);
   }
@@ -431,6 +453,7 @@ class _$TodosReceivedImpl implements _TodosReceived {
     TResult? Function(_WatchAllStarted value)? watchAllStarted,
     TResult? Function(_WatchCompletedStarted value)? watchCompletedStarted,
     TResult? Function(_TodosReceived value)? todosReceived,
+    TResult? Function(_ToggleCompleted value)? toggleCompleted,
   }) {
     return todosReceived?.call(this);
   }
@@ -441,6 +464,7 @@ class _$TodosReceivedImpl implements _TodosReceived {
     TResult Function(_WatchAllStarted value)? watchAllStarted,
     TResult Function(_WatchCompletedStarted value)? watchCompletedStarted,
     TResult Function(_TodosReceived value)? todosReceived,
+    TResult Function(_ToggleCompleted value)? toggleCompleted,
     required TResult orElse(),
   }) {
     if (todosReceived != null) {
@@ -459,6 +483,172 @@ abstract class _TodosReceived implements TodoEvent {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TodosReceivedImplCopyWith<_$TodosReceivedImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ToggleCompletedImplCopyWith<$Res> {
+  factory _$$ToggleCompletedImplCopyWith(_$ToggleCompletedImpl value,
+          $Res Function(_$ToggleCompletedImpl) then) =
+      __$$ToggleCompletedImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Todo todo});
+
+  $TodoCopyWith<$Res> get todo;
+}
+
+/// @nodoc
+class __$$ToggleCompletedImplCopyWithImpl<$Res>
+    extends _$TodoEventCopyWithImpl<$Res, _$ToggleCompletedImpl>
+    implements _$$ToggleCompletedImplCopyWith<$Res> {
+  __$$ToggleCompletedImplCopyWithImpl(
+      _$ToggleCompletedImpl _value, $Res Function(_$ToggleCompletedImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of TodoEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? todo = null,
+  }) {
+    return _then(_$ToggleCompletedImpl(
+      null == todo
+          ? _value.todo
+          : todo // ignore: cast_nullable_to_non_nullable
+              as Todo,
+    ));
+  }
+
+  /// Create a copy of TodoEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $TodoCopyWith<$Res> get todo {
+    return $TodoCopyWith<$Res>(_value.todo, (value) {
+      return _then(_value.copyWith(todo: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$ToggleCompletedImpl implements _ToggleCompleted {
+  const _$ToggleCompletedImpl(this.todo);
+
+  @override
+  final Todo todo;
+
+  @override
+  String toString() {
+    return 'TodoEvent.toggleCompleted(todo: $todo)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ToggleCompletedImpl &&
+            (identical(other.todo, todo) || other.todo == todo));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, todo);
+
+  /// Create a copy of TodoEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ToggleCompletedImplCopyWith<_$ToggleCompletedImpl> get copyWith =>
+      __$$ToggleCompletedImplCopyWithImpl<_$ToggleCompletedImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() watchAllStarted,
+    required TResult Function() watchCompletedStarted,
+    required TResult Function(List<Todo> todos) todosReceived,
+    required TResult Function(Todo todo) toggleCompleted,
+  }) {
+    return toggleCompleted(todo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? watchAllStarted,
+    TResult? Function()? watchCompletedStarted,
+    TResult? Function(List<Todo> todos)? todosReceived,
+    TResult? Function(Todo todo)? toggleCompleted,
+  }) {
+    return toggleCompleted?.call(todo);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? watchAllStarted,
+    TResult Function()? watchCompletedStarted,
+    TResult Function(List<Todo> todos)? todosReceived,
+    TResult Function(Todo todo)? toggleCompleted,
+    required TResult orElse(),
+  }) {
+    if (toggleCompleted != null) {
+      return toggleCompleted(todo);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_WatchAllStarted value) watchAllStarted,
+    required TResult Function(_WatchCompletedStarted value)
+        watchCompletedStarted,
+    required TResult Function(_TodosReceived value) todosReceived,
+    required TResult Function(_ToggleCompleted value) toggleCompleted,
+  }) {
+    return toggleCompleted(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_WatchAllStarted value)? watchAllStarted,
+    TResult? Function(_WatchCompletedStarted value)? watchCompletedStarted,
+    TResult? Function(_TodosReceived value)? todosReceived,
+    TResult? Function(_ToggleCompleted value)? toggleCompleted,
+  }) {
+    return toggleCompleted?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_WatchAllStarted value)? watchAllStarted,
+    TResult Function(_WatchCompletedStarted value)? watchCompletedStarted,
+    TResult Function(_TodosReceived value)? todosReceived,
+    TResult Function(_ToggleCompleted value)? toggleCompleted,
+    required TResult orElse(),
+  }) {
+    if (toggleCompleted != null) {
+      return toggleCompleted(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ToggleCompleted implements TodoEvent {
+  const factory _ToggleCompleted(final Todo todo) = _$ToggleCompletedImpl;
+
+  Todo get todo;
+
+  /// Create a copy of TodoEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$ToggleCompletedImplCopyWith<_$ToggleCompletedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

@@ -17,10 +17,10 @@ class NavigationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AutoTabsRouter(
-      routes: const [
+      routes: [
         HomeRoute(),
         HomeRoute(),
-        SearchRoute(),
+        const SearchRoute(),
         CompletedRoute(),
       ],
       transitionBuilder: (context, child, animation) => FadeTransition(
@@ -78,11 +78,14 @@ class NavigationScreen extends StatelessWidget {
           ),
           body: child,
           bottomNavigationBar: SafeArea(
-            child: SizedBox(
+            child: Container(
               height: 72,
               child: BottomNavigationBar(
+                elevation: 2,
                 iconSize: 28,
                 selectedFontSize: 12,
+                showUnselectedLabels: true,
+                type: BottomNavigationBarType.fixed,
                 currentIndex: tabsRouter.activeIndex,
                 onTap: (index) {
                   if (index == 1) {
@@ -100,19 +103,19 @@ class NavigationScreen extends StatelessWidget {
                 },
                 items:  [
                   BottomNavigationBarItem(
-                    icon: const Icon(Icons.checklist_rounded),
+                    icon: Icon(Icons.checklist_rounded),
                     label: context.tr('todo'),
                   ),
                   BottomNavigationBarItem(
-                    icon: const Icon(Icons.add_box_outlined),
+                    icon: Icon(Icons.add_box_outlined),
                     label: context.tr('create'),
                   ),
                   BottomNavigationBarItem(
-                    icon: const Icon(Icons.search),
+                    icon: Icon(Icons.search),
                     label: context.tr('search'),
                   ),
                   BottomNavigationBarItem(
-                    icon: const Icon(Icons.check_box_outlined),
+                    icon: Icon(Icons.check_box_outlined),
                     label: context.tr('done'),
                   ),
                 ],
