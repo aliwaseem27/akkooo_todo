@@ -27,7 +27,6 @@ class TodoLocalDataSource {
   }
 
   Future<void> deleteAllCompletedTodos() async {
-    // delete all completed todos
     await isar.writeTxn(() async {
       await isar.todoModels.filter().isCompletedEqualTo(true).deleteAll();
     });
