@@ -15,6 +15,7 @@ import 'features/domain/repositories/todo_repository.dart' as _i610;
 import 'features/infrastructure/datasources/local_datasource.dart' as _i1043;
 import 'features/infrastructure/repositories/todo_repository_impl.dart'
     as _i477;
+import 'features/presentation/create/blocs/todo_actor_bloc.dart' as _i498;
 import 'features/presentation/home/blocs/todo_bloc.dart' as _i808;
 
 extension GetItInjectableX on _i174.GetIt {
@@ -29,10 +30,12 @@ extension GetItInjectableX on _i174.GetIt {
       environmentFilter,
     );
     gh.factory<_i1043.TodoLocalDataSource>(() => _i1043.TodoLocalDataSource());
-    gh.lazySingleton<_i610.TodoRepository>(
+    gh.lazySingleton<_i610.ITodoRepository>(
         () => _i477.TodoRepositoryImplementation());
     gh.factory<_i808.TodoBloc>(
-        () => _i808.TodoBloc(gh<_i610.TodoRepository>()));
+        () => _i808.TodoBloc(gh<_i610.ITodoRepository>()));
+    gh.factory<_i498.TodoActorBloc>(
+        () => _i498.TodoActorBloc(gh<_i610.ITodoRepository>()));
     return this;
   }
 }

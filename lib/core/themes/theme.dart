@@ -1,8 +1,9 @@
-import 'package:akkooo_todo/core/themes/theme_widgets/app_bar_theme_widget.dart';
-import 'package:akkooo_todo/core/themes/theme_widgets/elevated_theme_button.dart';
-import 'package:akkooo_todo/core/themes/theme_widgets/navigator_bar_theme_widget.dart';
-
 import 'package:flutter/material.dart';
+
+import 'theme_widgets/app_bar_theme_widget.dart';
+import 'theme_widgets/elevated_theme_button.dart';
+import 'theme_widgets/navigator_bar_theme_widget.dart';
+import 'theme_widgets/text_button_Theme_widget.dart';
 
 class AppTheme {
   AppTheme._();
@@ -14,6 +15,7 @@ class AppTheme {
     elevatedButtonTheme: AppElevatedButtonTheme.lightElevatedButtonTheme,
     bottomNavigationBarTheme: AppBottomNavigatorBarTheme.lightBottomNavigatorBarTheme,
     appBarTheme: AppBarThemeWidget.lightAppBarTheme,
+    textButtonTheme: TextButtonThemeWidget.lightTextButtonTheme,
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -23,5 +25,6 @@ class AppTheme {
     elevatedButtonTheme: AppElevatedButtonTheme.darkElevatedButtonTheme,
     bottomNavigationBarTheme: AppBottomNavigatorBarTheme.darkBottomNavigatorBarTheme,
     appBarTheme: AppBarThemeWidget.darkAppBarTheme,
+    textButtonTheme: TextButtonThemeWidget.darkTextButtonTheme,
   );
 }
