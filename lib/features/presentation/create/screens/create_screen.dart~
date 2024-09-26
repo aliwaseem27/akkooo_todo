@@ -17,7 +17,7 @@ class CreateScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<TodoActorBloc>()..add(TodoActorEvent.initialized(todo)),
+      create: (context) => getIt<TodoActorBloc>().add(TodoActorEvent.initialized(todo)),
       child: Container(
         height: MediaQuery.of(context).size.height * 0.5,
         padding: const EdgeInsets.all(AppSizes.defaultSpace),

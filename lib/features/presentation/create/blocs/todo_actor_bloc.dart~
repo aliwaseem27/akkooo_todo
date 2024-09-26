@@ -62,7 +62,7 @@ class TodoActorBloc extends Bloc<TodoActorEvent, TodoActorState> {
 
   Future<void> _onInitializeTodo(_Initialized event, Emitter<TodoActorState> emit) async {
     try {
-      emit(state.copyWith(isEditing: event.todo != null, todo: event.todo ?? state.todo));
+      emit(state.copyWith(isEditing: state.todo.id != null ? true : false));
     } catch (e) {
       debugPrint(e.toString());
     }

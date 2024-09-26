@@ -4,7 +4,11 @@ part of 'todo_actor_bloc.dart';
 class TodoActorState with _$TodoActorState {
   const factory TodoActorState({
     required Todo todo,
+    required bool isEditing,
   }) = _TodoActorState;
 
-  factory TodoActorState.initial() => const TodoActorState(todo: Todo(title: ""));
+  factory TodoActorState.initial() => const TodoActorState(
+        todo: Todo(title: ""),
+        isEditing: false,
+      );
 }

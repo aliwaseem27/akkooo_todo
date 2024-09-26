@@ -1283,6 +1283,7 @@ abstract class _DeleteAllCompletedTodos implements TodoActorEvent {
 /// @nodoc
 mixin _$TodoActorState {
   Todo get todo => throw _privateConstructorUsedError;
+  bool get isEditing => throw _privateConstructorUsedError;
 
   /// Create a copy of TodoActorState
   /// with the given fields replaced by the non-null parameter values.
@@ -1297,7 +1298,7 @@ abstract class $TodoActorStateCopyWith<$Res> {
           TodoActorState value, $Res Function(TodoActorState) then) =
       _$TodoActorStateCopyWithImpl<$Res, TodoActorState>;
   @useResult
-  $Res call({Todo todo});
+  $Res call({Todo todo, bool isEditing});
 
   $TodoCopyWith<$Res> get todo;
 }
@@ -1318,12 +1319,17 @@ class _$TodoActorStateCopyWithImpl<$Res, $Val extends TodoActorState>
   @override
   $Res call({
     Object? todo = null,
+    Object? isEditing = null,
   }) {
     return _then(_value.copyWith(
       todo: null == todo
           ? _value.todo
           : todo // ignore: cast_nullable_to_non_nullable
               as Todo,
+      isEditing: null == isEditing
+          ? _value.isEditing
+          : isEditing // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 
@@ -1346,7 +1352,7 @@ abstract class _$$TodoActorStateImplCopyWith<$Res>
       __$$TodoActorStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Todo todo});
+  $Res call({Todo todo, bool isEditing});
 
   @override
   $TodoCopyWith<$Res> get todo;
@@ -1366,12 +1372,17 @@ class __$$TodoActorStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? todo = null,
+    Object? isEditing = null,
   }) {
     return _then(_$TodoActorStateImpl(
       todo: null == todo
           ? _value.todo
           : todo // ignore: cast_nullable_to_non_nullable
               as Todo,
+      isEditing: null == isEditing
+          ? _value.isEditing
+          : isEditing // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -1379,14 +1390,16 @@ class __$$TodoActorStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$TodoActorStateImpl implements _TodoActorState {
-  const _$TodoActorStateImpl({required this.todo});
+  const _$TodoActorStateImpl({required this.todo, required this.isEditing});
 
   @override
   final Todo todo;
+  @override
+  final bool isEditing;
 
   @override
   String toString() {
-    return 'TodoActorState(todo: $todo)';
+    return 'TodoActorState(todo: $todo, isEditing: $isEditing)';
   }
 
   @override
@@ -1394,11 +1407,13 @@ class _$TodoActorStateImpl implements _TodoActorState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TodoActorStateImpl &&
-            (identical(other.todo, todo) || other.todo == todo));
+            (identical(other.todo, todo) || other.todo == todo) &&
+            (identical(other.isEditing, isEditing) ||
+                other.isEditing == isEditing));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, todo);
+  int get hashCode => Object.hash(runtimeType, todo, isEditing);
 
   /// Create a copy of TodoActorState
   /// with the given fields replaced by the non-null parameter values.
@@ -1411,11 +1426,14 @@ class _$TodoActorStateImpl implements _TodoActorState {
 }
 
 abstract class _TodoActorState implements TodoActorState {
-  const factory _TodoActorState({required final Todo todo}) =
-      _$TodoActorStateImpl;
+  const factory _TodoActorState(
+      {required final Todo todo,
+      required final bool isEditing}) = _$TodoActorStateImpl;
 
   @override
   Todo get todo;
+  @override
+  bool get isEditing;
 
   /// Create a copy of TodoActorState
   /// with the given fields replaced by the non-null parameter values.

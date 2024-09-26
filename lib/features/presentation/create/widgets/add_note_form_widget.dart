@@ -9,11 +9,9 @@ import '../blocs/todo_actor_bloc.dart';
 class TodoFormWidget extends StatelessWidget {
   const TodoFormWidget({
     super.key,
-    required this.isEditing,
     this.todo,
   });
 
-  final bool isEditing;
   final Todo? todo;
 
   @override
@@ -76,7 +74,7 @@ class TodoFormWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
-                    child: isEditing ? Text(context.tr('update')) : Text(context.tr('create')),
+                    child: state.isEditing ? Text(context.tr('update')) : Text(context.tr('create')),
                     onPressed: () {
                       context.read<TodoActorBloc>().add(const TodoActorEvent.saved());
                       Navigator.pop(context);
