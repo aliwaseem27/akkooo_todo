@@ -18,17 +18,9 @@ class CreateScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => getIt<TodoActorBloc>()..add(TodoActorEvent.initialized(todo)),
-      child: Container(
-        height: MediaQuery.of(context).size.height * 0.5,
-        padding: const EdgeInsets.all(AppSizes.defaultSpace),
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(AppSizes.borderRadiusLg),
-            topRight: Radius.circular(AppSizes.borderRadiusLg),
-          ),
-        ),
-        child: SizedBox(
-          width: double.infinity,
+      child: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(AppSizes.defaultSpace),
           child: SingleChildScrollView(
             child: TodoFormWidget(todo: todo),
           ),

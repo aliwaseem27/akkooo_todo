@@ -1,11 +1,12 @@
 import 'package:akkooo_todo/features/domain/entities/todo.dart';
+import 'package:akkooo_todo/features/presentation/screens/common/app_router.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/constants/app_sizes.dart';
 import '../../../blocs/todo_actor_bloc/todo_actor_bloc.dart';
-
 
 class TodoFormWidget extends StatelessWidget {
   const TodoFormWidget({
@@ -78,7 +79,11 @@ class TodoFormWidget extends StatelessWidget {
                     child: state.isEditing ? Text(context.tr('update')) : Text(context.tr('create')),
                     onPressed: () {
                       context.read<TodoActorBloc>().add(const TodoActorEvent.saved());
-                      Navigator.pop(context);
+                      if (context.router.canNavigateBack) {
+                        context.router.back();
+                      } else {
+                        context.router.navigate(const HomeRoute());
+                      }
                     },
                   ),
                 ],

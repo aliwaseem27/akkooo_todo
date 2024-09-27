@@ -17,11 +17,11 @@ class NavigationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AutoTabsRouter(
-      routes: const [
-        HomeRoute(),
-        HomeRoute(),
-        SearchRoute(),
-        CompletedRoute(),
+      routes: [
+        const HomeRoute(),
+        CreateRoute(),
+        const SearchRoute(),
+        const CompletedRoute(),
       ],
       transitionBuilder: (context, child, animation) => FadeTransition(
         opacity: animation,
@@ -85,20 +85,9 @@ class NavigationScreen extends StatelessWidget {
                 selectedFontSize: 12,
                 currentIndex: tabsRouter.activeIndex,
                 onTap: (index) {
-                  if (index == 1) {
-                    showModalBottomSheet(
-                        backgroundColor: Theme.of(context).brightness == Brightness.light
-                            ? Colors.white
-                            : AppColors.neutralDarkColor,
-                        context: context,
-                        builder: (context) {
-                          return const CreateScreen();
-                        });
-                  } else {
-                    tabsRouter.setActiveIndex(index);
-                  }
+                  tabsRouter.setActiveIndex(index);
                 },
-                items:  [
+                items: [
                   BottomNavigationBarItem(
                     icon: const Icon(Icons.checklist_rounded),
                     label: context.tr('todo'),

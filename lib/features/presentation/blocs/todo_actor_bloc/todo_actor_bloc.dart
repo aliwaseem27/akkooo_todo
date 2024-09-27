@@ -76,6 +76,7 @@ class TodoActorBloc extends Bloc<TodoActorEvent, TodoActorState> {
             id: event.todo.id,
             title: event.todo.title,
             note: event.todo.note,
+            isCompleted: event.todo.isCompleted,
           ),
         );
       }
