@@ -53,4 +53,10 @@ class TodoRepositoryImplementation implements ITodoRepository {
   Future<void> deleteAllCompletedTodos() async {
     await todoLocalDataSource.deleteAllCompletedTodos();
   }
+
+  @override
+  Future<List<Todo>> searchTodos(String query) {
+    // TODO: implement searchTodos
+    throw UnimplementedError();
+  }
 }

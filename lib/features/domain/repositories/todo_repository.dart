@@ -12,4 +12,6 @@ abstract class ITodoRepository {
   Future<void> deleteTodo(Todo todo);
 
   Future<void> deleteAllCompletedTodos();
+
+  Future<List<Todo>> searchTodos(String query);
 }
